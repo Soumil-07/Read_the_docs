@@ -2,11 +2,8 @@
 #include "dft.h"
 #include"coefficients32.h"
 
-void dft(DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE])
+void dft(DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE], DTYPE X_R[SIZE], DTYPE X_I[SIZE])
 {
-    DTYPE X_R[SIZE];
-    DTYPE X_I[SIZE];
-
     // For each output bin k
     for (int k = 0; k < SIZE; k++) {
         DTYPE sum_real = 0.0f;
@@ -30,9 +27,4 @@ void dft(DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE])
         X_I[k] = sum_imag;
     }
 
-    // Write results back to the provided arrays
-    for (int i = 0; i < SIZE; i++) {
-        real_sample[i] = X_R[i];
-        imag_sample[i] = X_I[i];
-    }
 }
