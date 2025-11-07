@@ -1,6 +1,6 @@
 #include<math.h>
 #include "dft.h"
-#include"coefficients32.h"
+#include"coefficients32_2D.h"
 
 void dft(DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE])
 {
@@ -14,16 +14,15 @@ void dft(DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE])
 
         // Accumulate contributions from all input samples n
         for (int n = 0; n < SIZE; n++) {
-            int index = (k * n) % SIZE;
 
-            DTYPE cos_val = cos_coefficients_table[index];
-            DTYPE sin_tbl_val = sin_coefficients_table[index]; 
+            DTYPE cos_val = cos_coeff_table[k][n];
+            DTYPE sin_val = sin_coeff_table[k][n]; 
 
             DTYPE xr = real_sample[n];
             DTYPE xi = imag_sample[n];
 
-            sum_real += xr * cos_val - xi * sin_tbl_val;
-            sum_imag += xi * cos_val + xr * sin_tbl_val;
+            sum_real += xr * cos_val - xi * sin_val;
+            sum_imag += xi * cos_val + xr * sin_val;
         }
 
         X_R[k] = sum_real;
