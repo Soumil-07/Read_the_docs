@@ -4,28 +4,35 @@
 
 void dft(DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE])
 {
-//Write your code here
     DTYPE X_R[SIZE];
     DTYPE X_I[SIZE];
-    
-    for (int k = 0; k < SIZE; k++) {
-        DTYPE sum_real = 0;
-        DTYPE sum_imag = 0;
 
+    // For each output bin k
+    for (int k = 0; k < SIZE; k++) {
+        DTYPE sum_real = 0.0f;
+        DTYPE sum_imag = 0.0f;
+
+        // Accumulate contributions from all input samples n
         for (int n = 0; n < SIZE; n++) {
-            DTYPE angle = 2 * M_PI * k * n / SIZE;
-            sum_real += real_sample[n] * cos(angle) + imag_sample[n] * sin(angle);
-            sum_imag += imag_sample[n] * cos(angle) - real_sample[n] * sin(angle);
+            int index = (k * n) % SIZE;
+
+            DTYPE cos_val = cos_coefficients_table[index];
+            DTYPE sin_tbl_val = sin_coefficients_table[index]; 
+
+            DTYPE xr = real_sample[n];
+            DTYPE xi = imag_sample[n];
+
+            sum_real += xr * cos_val - xi * sin_tbl_val;
+            sum_imag += xi * cos_val + xr * sin_tbl_val;
         }
 
         X_R[k] = sum_real;
         X_I[k] = sum_imag;
     }
 
-    // Write back results
+    // Write results back to the provided arrays
     for (int i = 0; i < SIZE; i++) {
         real_sample[i] = X_R[i];
         imag_sample[i] = X_I[i];
     }
-
 }
