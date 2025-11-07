@@ -4,8 +4,13 @@
 
 void dft(DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE], DTYPE X_R[SIZE], DTYPE X_I[SIZE])
 {
+    #pragma HLS ARRAY_PARTITION variable=real_sample block factor=32 dim=1
+    #pragma HLS ARRAY_PARTITION variable=imag_sample block factor=32 dim=1
+    #pragma HLS ARRAY_PARTITION variable=X_R block factor=32 dim=1
+    #pragma HLS ARRAY_PARTITION variable=X_I block factor=32 dim=1
     // For each output bin k
     for (int k = 0; k < SIZE; k++) {
+	#pragma HLS pipeline II=1
         DTYPE sum_real = 0.0f;
         DTYPE sum_imag = 0.0f;
 
