@@ -10,12 +10,12 @@ void dft(DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE], DTYPE X_R[SIZE], DTYP
     #pragma HLS ARRAY_PARTITION variable=X_I block factor=32 dim=1
     // For each output bin k
     for (int k = 0; k < SIZE; k++) {
-	#pragma HLS pipeline II=1
         DTYPE sum_real = 0.0f;
         DTYPE sum_imag = 0.0f;
 
         // Accumulate contributions from all input samples n
         for (int n = 0; n < SIZE; n++) {
+	    #pragma HLS unroll factor=1
             int index = (k * n) % SIZE;
 
             DTYPE cos_val = cos_coefficients_table[index];
