@@ -35,7 +35,6 @@ struct Rmse
 Rmse rmse_R,  rmse_I;
 
 DTYPE In_R[SIZE], In_I[SIZE];
-DTYPE Out_R[SIZE], Out_I[SIZE];
 
 int main()
 {
@@ -54,15 +53,15 @@ int main()
 	
 
 	// DFT
-	dft(In_R, In_I,Out_R, Out_I);
+	dft(In_R, In_I);
 
 
 	// comparing with golden output
 	for(int i=0; i<SIZE; i++)
 	{
 		fscanf(fp, "%d %f %f", &index, &gold_R, &gold_I);
-		rmse_R.add_value((float)Out_R[i] - gold_R);
-		rmse_I.add_value((float)Out_I[i] - gold_I);
+		rmse_R.add_value((float)In_R[i] - gold_R);
+		rmse_I.add_value((float)In_I[i] - gold_I);
 	}
 	fclose(fp);
 

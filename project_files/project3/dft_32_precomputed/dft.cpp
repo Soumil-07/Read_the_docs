@@ -1,35 +1,32 @@
 #include<math.h>
 #include "dft.h"
-#include"coefficients32.h"
+#include "coefficients32.h"
 
-void dft(DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE], DTYPE X_R[SIZE], DTYPE X_I[SIZE])
+void dft(DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE])
 {
-    #pragma HLS ARRAY_PARTITION variable=real_sample block factor=32 dim=1
-    #pragma HLS ARRAY_PARTITION variable=imag_sample block factor=32 dim=1
-    #pragma HLS ARRAY_PARTITION variable=X_R block factor=32 dim=1
-    #pragma HLS ARRAY_PARTITION variable=X_I block factor=32 dim=1
-    // For each output bin k
-    for (int k = 0; k < SIZE; k++) {
-	#pragma HLS pipeline II=1
-        DTYPE sum_real = 0.0f;
-        DTYPE sum_imag = 0.0f;
+	DTYPE w, c, s;
+	DTYPE temp_real[SIZE], temp_imag[SIZE];	
 
-        // Accumulate contributions from all input samples n
-        for (int n = 0; n < SIZE; n++) {
-            int index = (k * n) % SIZE;
+	for (int i = 0; i < SIZE; i++)
+	#pragma HLS pipeline off
+	{
+		temp_real[i] = 0;
+		temp_imag[i] = 0;
 
-            DTYPE cos_val = cos_coefficients_table[index];
-            DTYPE sin_tbl_val = sin_coefficients_table[index]; 
+		for (int j = 0; j < SIZE; j++)
+		{
+			int index = (i * j) % SIZE;
+			c = cos_coefficients_table[index];
+			s = sin_coefficients_table[index];
 
-            DTYPE xr = real_sample[n];
-            DTYPE xi = imag_sample[n];
+			temp_real[i] += real_sample[j]*c - imag_sample[j]*s;
+			temp_imag[i] += real_sample[j]*s + imag_sample[j]*c;
+		}
+	}
 
-            sum_real += xr * cos_val - xi * sin_tbl_val;
-            sum_imag += xi * cos_val + xr * sin_tbl_val;
-        }
-
-        X_R[k] = sum_real;
-        X_I[k] = sum_imag;
-    }
-
+	for (int i = 0; i < SIZE; i++)
+	{
+		real_sample[i] = temp_real[i];
+		imag_sample[i] = temp_imag[i];
+	}
 }
