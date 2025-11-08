@@ -7,13 +7,17 @@ void dft(DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE])
 	DTYPE w, c, s;
 	DTYPE temp_real[SIZE], temp_imag[SIZE];	
 
-	for (int i = 0; i < SIZE; i++)
-	#pragma HLS pipeline off
-	{
+	// Initialize accumulators to zero
+	for (int i = 0; i < SIZE; i++) {
+	#pragma HLS unroll
 		temp_real[i] = 0;
 		temp_imag[i] = 0;
+	}
 
-		for (int j = 0; j < SIZE; j++)
+	for (int j = 0; j < SIZE; j++)
+	#pragma HLS pipeline off
+	{
+		for (int i = 0; i < SIZE; i++)
 		{
 			int index = (i * j) % SIZE;
 			c = cos_coefficients_table[index];
