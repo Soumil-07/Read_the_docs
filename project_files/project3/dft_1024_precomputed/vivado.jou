@@ -1,0 +1,69 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sat Nov  8 21:58:21 2025
+# Process ID         : 1444604
+# Current directory  : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed
+# Command line       : vivado
+# Log file           : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/vivado.log
+# Journal file       : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/vivado.jou
+# Running On         : ieng6-253.ucsd.edu
+# Platform           : Linuxmint
+# Operating System   : Linux Mint 22.1
+# Processor Detail   : Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz
+# CPU Frequency      : 2194.843 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 4
+# Host memory        : 33655 MB
+# Swap memory        : 1023 MB
+# Total Virtual      : 34679 MB
+# Available Virtual  : 22202 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.xpr
+close_project
+open_project /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.xpr
+set_property  ip_repo_paths  /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/dft.comp/hls/impl/ip [current_project]
+update_ip_catalog
+create_bd_design "design_dft"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:hls:dft:1.0 dft_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+set_property CONFIG.PCW_USE_S_AXI_HP0 {1} [get_bd_cells processing_system7_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_1
+endgroup
+set_property CONFIG.c_include_sg {0} [get_bd_cells axi_dma_1]
+set_property CONFIG.c_include_sg {0} [get_bd_cells axi_dma_0]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/M_AXIS_MM2S] [get_bd_intf_pins dft_0/real_sample]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_1/M_AXIS_MM2S] [get_bd_intf_pins dft_0/imag_sample]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_1/S_AXIS_S2MM] [get_bd_intf_pins dft_0/imag_op]
+connect_bd_intf_net [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] [get_bd_intf_pins dft_0/real_op]
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_dma_0/S_AXI_LITE} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins axi_dma_0/S_AXI_LITE]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_dma_1/S_AXI_LITE} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins axi_dma_1/S_AXI_LITE]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/dft_0/s_axi_control} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins dft_0/s_axi_control]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/axi_dma_0/M_AXI_MM2S} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/axi_dma_0/M_AXI_S2MM} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_S2MM]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/axi_dma_1/M_AXI_MM2S} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins axi_dma_1/M_AXI_MM2S]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/axi_dma_1/M_AXI_S2MM} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins axi_dma_1/M_AXI_S2MM]
+endgroup
+save_bd_design
+validate_bd_design
+make_wrapper -files [get_files /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.srcs/sources_1/bd/design_dft/design_dft.bd] -top
+add_files -norecurse /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.gen/sources_1/bd/design_dft/hdl/design_dft_wrapper.v
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_run impl_1

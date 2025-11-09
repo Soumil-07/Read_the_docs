@@ -2,9 +2,18 @@
 #include <ap_fixed.h>
 #include <stdint.h>
 
+#include "ap_axi_sdata.h"
+#include "hls_stream.h"
+
+typedef hls::axis<float, 0,0,0> transPkt;
+
 typedef float DTYPE;
-typedef uint16_t idx_t;
+//typedef uint16_t idx_t;
 typedef uint16_t iter_t;
 
 #define SIZE 1024 		/* SIZE OF DFT */
-void dft(DTYPE xx_R[SIZE], DTYPE xx_I[SIZE], DTYPE XX_R[SIZE], DTYPE XX_I[SIZE]);
+void dft(
+		hls::stream<transPkt>&real_sample,
+		hls::stream<transPkt>&imag_sample,
+		hls::stream<transPkt>&real_op,
+		hls::stream<transPkt>&imag_op);

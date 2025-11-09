@@ -34,23 +34,45 @@ struct Rmse
 
 Rmse rmse_R,  rmse_I;
 
-DTYPE In_R[SIZE], In_I[SIZE],Out_R[SIZE],Out_I[SIZE];   //Modify the testbench while checking for demo. You will have to access the data variable of the structure//
+//DTYPE In_R[SIZE], In_I[SIZE],Out_R[SIZE],Out_I[SIZE];   //Modify the testbench while checking for demo. You will have to access the data variable of the structure//
 
 int main()
 {
+        printf("-------axis_fp_example Test-------\n");
+	hls::stream<transPkt> In_R, In_I, Out_R, Out_I;
+	transPkt pkt_In_R, pkt_In_I, pkt_Out_R, pkt_Out_I;
+	//fp_int dataA, dataB, dataC, dataD;
+	float dataA, dataB, dataC, dataD;
+
 	int index;
 	float gold_R, gold_I;
+	float In_R_arr[SIZE];
+	float In_I_arr[SIZE];
 
 	FILE * fp = fopen("out.gold.dat","r");
 
 	// getting input data
 	for(int i=0; i<SIZE; i++)
 	{
-		In_R[i] = i;
-		In_I[i] = 0.0;
+		In_R_arr[i] = i;
+		In_I_arr[i] = 0.0;
 
 	}
 	
+	for (int i = 0; i < SIZE; i++) {
+		pkt_In_R.data = In_R_arr[i];
+		pkt_In_I.data = In_I_arr[i];
+		// Prepare tlast signal
+		if (i == SIZE - 1) {
+			pkt_In_R.last = 1;
+			pkt_In_I.last = 1;
+		} else {
+			pkt_In_R.last = 0;
+			pkt_In_I.last = 0;
+		}
+		In_R.write(pkt_In_R);
+		In_I.write(pkt_In_I);
+	}
 
 	// DFT
 	dft(In_R, In_I,Out_R,Out_I);
@@ -59,9 +81,15 @@ int main()
 	// comparing with golden output
 	for(int i=0; i<SIZE; i++)
 	{
+		// Read the results from output streams
+		pkt_Out_R = Out_R.read();
+		pkt_Out_I = Out_I.read();
+		dataC = pkt_Out_R.data;
+		dataD = pkt_Out_I.data;
+
 		fscanf(fp, "%d %f %f", &index, &gold_R, &gold_I);
-		rmse_R.add_value((float)Out_R[i] - gold_R);
-		rmse_I.add_value((float)Out_I[i] - gold_I);
+		rmse_R.add_value((float)dataC - gold_R);
+		rmse_I.add_value((float)dataD - gold_I);
 	}
 	fclose(fp);
 
