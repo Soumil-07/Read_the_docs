@@ -5,11 +5,11 @@ SW Build: 5239630 on Fri Nov 08 22:34:34 MST 2024
 IP Build: 5239520 on Sun Nov 10 16:12:51 MST 2024
 IP Build: 5239520 on Sun Nov 10 16:12:51 MST 2024
 
-Process ID (PID): 1444604
+Process ID (PID): 1582522
 License: Customer
 Mode: GUI Mode
 
-Current time: 	Sat Nov 08 21:58:47 PST 2025
+Current time: 	Sat Nov 08 23:57:26 PST 2025
 Time zone: 	Pacific Standard Time (America/Los_Angeles)
 
 OS: Linux
@@ -53,7 +53,7 @@ Vivado layouts directory: /home/linux/ieng6/students/186/dnwadhwani/.Xilinx/Viva
 PlanAhead jar file: 	/software/common/Xilinx_Vitis/Vivado/2024.2/lib/classes/planAhead.jar
 Vivado log file: 	/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/vivado.log
 Vivado journal file: 	/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/vivado.jou
-Engine tmp dir: 	./.Xil/Vivado-1444604-ieng6-253.ucsd.edu
+Engine tmp dir: 	./.Xil/Vivado-1582522-ieng6-253.ucsd.edu
 Non-Default Parameters:	[]
 
 Xilinx & AMD Environment Variables
@@ -73,7 +73,7 @@ RDI_PATCHROOT:
 RDI_PLATFORM: lnx64
 RDI_PREPEND_PATH: /software/common/Xilinx_Vitis/Vitis/2024.2/bin:/software/common/Xilinx_Vitis/Vivado/2024.2/ids_lite/ISE/bin/lin64
 RDI_PROG: /software/common/Xilinx_Vitis/Vivado/2024.2/bin/unwrapped/lnx64.o/vivado
-RDI_SESSION_INFO: /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed:ieng6-253.ucsd.edu_1762667898_1444535
+RDI_SESSION_INFO: /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed:ieng6-253.ucsd.edu_1762675017_1582454
 RDI_SHARED_DATA: /software/common/Xilinx_Vitis/SharedData/2024.2/data
 RDI_TPS_ROOT: /software/common/Xilinx_Vitis/Vivado/2024.2/tps/lnx64
 RDI_USE_JDK21: True
@@ -89,7 +89,7 @@ XILINX_VIVADO: /software/common/Xilinx_Vitis/Vivado/2024.2
 
 GUI allocated memory:	512 MB
 GUI max memory:		4,072 MB
-Engine allocated memory: 1,465 MB
+Engine allocated memory: 1,480 MB
 
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
@@ -98,21 +98,27 @@ Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 // TclEventType: START_GUI
 // Tcl Message: start_gui 
-// HMemoryUtils.trashcanNow. Engine heap size: 1,486 MB. GUI used memory: 67 MB. Current time: 11/8/25, 9:58:48 PM PST
-// WARNING: HEventQueue.dispatchEvent() is taking  1002 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 1,507 MB. GUI used memory: 67 MB. Current time: 11/8/25, 11:57:28 PM PST
 // WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
-selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // t (PAResourceEtoH.GettingStartedView_OPEN_PROJECT)
-// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+selectButton(PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT, "Create Project"); // t (PAResourceEtoH.GettingStartedView_CREATE_NEW_PROJECT)
+// Run Command: PAResourceCommand.PACommandNames_NEW_PROJECT
+selectButton("NEXT", "Next", "New Project"); // JButton (NEXT)
+setText(PAResourceOtoP.ProjectNameChooser_PROJECT_NAME, "project_dft_fix"); // ad (PAResourceOtoP.ProjectNameChooser_PROJECT_NAME)
+selectButton("NEXT", "Next", "New Project"); // JButton (NEXT)
+// [GUI Memory]: 97 MB (+99590kb) [00:01:34]
+// [Engine Memory]: 1,549 MB (+1473206kb) [00:01:34]
+// [GUI Memory]: 106 MB (+4309kb) [00:01:34]
+// [GUI Memory]: 139 MB (+28999kb) [00:01:34]
+selectButton("NEXT", "Next", "New Project"); // JButton (NEXT)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,583 MB. GUI used memory: 68 MB. Current time: 11/8/25, 11:58:43 PM PST
 // Elapsed time: 43 seconds
-setFileChooser("/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.xpr");
-// [GUI Memory]: 134 MB (+138242kb) [00:02:13]
-// [Engine Memory]: 1,555 MB (+1479391kb) [00:02:13]
-// Opening Vivado Project: /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.xpr. Version: Vivado v2024.2 
+setText("PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD", "z020clg400-1"); // OverlayTextField (PAResourceEtoH.FPGAChooser_FPGA_TABLE_SEARCH_FIELD)
+selectTable(PAResourceEtoH.FPGAChooser_FPGA_TABLE, "xc7z020clg400-1 ; 400 ; 125 ; 53200 ; 106400 ; 140 ; 0 ; 220 ; 32 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 0 ; 4 ;  ;  ;  ;  ; 0 ;  ;  ;  ;  ;  ;  ; 0.95 ; 0.95 ; 1.05", 2, "xc7z020clg400-1", 0); // e (PAResourceEtoH.FPGAChooser_FPGA_TABLE)
+selectButton("NEXT", "Next", "New Project"); // JButton (NEXT)
 // TclEventType: DEBUG_PROBE_SET_CHANGE
 // TclEventType: FLOW_ADDED
-// TclEventType: MSGMGR_MOVEMSG
-// TclEventType: FILE_SET_CHANGE
 // TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
 // TclEventType: RUN_CURRENT
 // TclEventType: PROJECT_DASHBOARD_NEW
 // TclEventType: PROJECT_DASHBOARD_GADGET_NEW
@@ -128,109 +134,47 @@ setFileChooser("/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_
 // TclEventType: PROJECT_DASHBOARD_GADGET_NEW
 // TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
 // TclEventType: PROJECT_NEW
-// Tcl Message: open_project /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.xpr 
-// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.gen/sources_1'. 
-// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: create_project project_dft_fix /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix -part xc7z020clg400-1 
 // Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
 // TclEventType: PROJECT_NEW
-// [Engine Memory]: 1,675 MB (+43456kb) [00:02:16]
-// WARNING: HEventQueue.dispatchEvent() is taking  2725 ms.
+// [Engine Memory]: 1,684 MB (+59564kb) [00:02:28]
+// WARNING: HEventQueue.dispatchEvent() is taking  1906 ms.
+// TclEventType: FILE_SET_OPTIONS_CHANGE
 // Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/software/common/Xilinx_Vitis/Vivado/2024.2/data/ip'. 
-// HMemoryUtils.trashcanNow. Engine heap size: 1,730 MB. GUI used memory: 72 MB. Current time: 11/8/25, 10:00:44 PM PST
-// Project name: project_dft; location: /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft; part: xc7z020clg400-1
-dismissDialog("Open Project"); // bh (Open Project Progress)
-selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
-// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
-// [GUI Memory]: 148 MB (+7455kb) [00:02:26]
-dismissDialog("Open IP Catalog"); // bh (Open IP Catalog Progress)
-// PAPropertyPanels.initPanels (/software/common/Xilinx_Vitis/SharedData/2024.2/data) elapsed time: 0.4s
-selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "User Repository ;  ;  ;  ; ", 0, "User Repository", 0, true, false, false, false, true, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE) - Popup Trigger - Node
-selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "User Repository ;  ;  ;  ; ", 0, "User Repository", 0, true, false, false, false, true, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE) - Popup Trigger - Node
-selectMenuItem(PAResourceAtoD.CoreAndInterfacesBaseTreeTablePanel_ADD_REPOSITORY, "Add Repository..."); // aq (PAResourceAtoD.CoreAndInterfacesBaseTreeTablePanel_ADD_REPOSITORY)
-// Elapsed time: 35 seconds
-dismissFolderChooser();
-// [Engine Memory]: 1,761 MB (+2422kb) [00:03:06]
-selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "User Repository ;  ;  ;  ; ", 0, "User Repository", 0, true, false, false, false, true, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE) - Popup Trigger - Node
-selectMenuItem(PAResourceAtoD.CoreAndInterfacesBaseTreeTablePanel_ADD_REPOSITORY, "Add Repository..."); // aq (PAResourceAtoD.CoreAndInterfacesBaseTreeTablePanel_ADD_REPOSITORY)
-dismissFolderChooser();
-closeMainWindow("project_dft - [/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.xpr] - Vivado 2024.2"); // G (MainFrame)
-// Run Command: PAResourceCommand.PACommandNames_EXIT
-selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Exit Vivado"); // a (RDIResource.BaseDialog_CANCEL)
-dismissDialog("Exit Vivado"); // u (dialog3)
-// [GUI Memory]: 166 MB (+11452kb) [00:03:26]
-selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ai (PAResourceItoN.MainMenuMgr_FILE, File)
-selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // an (PAResourceItoN.MainMenuMgr_PROJECT, Project)
-selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // an (PAResourceItoN.MainMenuMgr_CHECKPOINT, Checkpoint)
-dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ai (PAResourceItoN.MainMenuMgr_FILE, File)
-selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXIS Infrastructure ;  ;  ;  ; ", 5, "AXIS Infrastructure", 0, true); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE) - Node
-// Elapsed time: 13 seconds
-selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (PAResourceTtoZ.TaskBanner_CLOSE)
-closeTask("Project Manager", "Project Manager", "DesignTask.PROJECT_MANAGER");
-// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
-selectButton(RDIResource.BaseDialog_OK, "OK", "Close Project"); // a (RDIResource.BaseDialog_OK)
-// TclEventType: PROJECT_CLOSE
-dismissDialog("Close Project"); // u (dialog4)
-// HMemoryUtils.trashcanNow. Engine heap size: 1,766 MB. GUI used memory: 74 MB. Current time: 11/8/25, 10:02:12 PM PST
-// Tcl Message: close_project 
-dismissDialog("Close Project"); // bh (Close Project Progress)
-selectButton(PAResourceEtoH.GettingStartedView_OPEN_PROJECT, "Open Project"); // t (PAResourceEtoH.GettingStartedView_OPEN_PROJECT)
-// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
-// Elapsed time: 45 seconds
-setFileChooser("/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.xpr");
-// Opening Vivado Project: /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.xpr. Version: Vivado v2024.2 
-// TclEventType: MSGMGR_MOVEMSG
-// TclEventType: FILE_SET_CHANGE
-// TclEventType: FILE_SET_NEW
-// TclEventType: RUN_CURRENT
-// TclEventType: PROJECT_DASHBOARD_NEW
-// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
-// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
-// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
-// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
-// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
-// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
-// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
-// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
-// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
-// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
-// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
-// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
-// TclEventType: PROJECT_NEW
-// Tcl Message: open_project /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.xpr 
-// Tcl Message: INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory '/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.gen/sources_1'. 
-// Tcl Message: Scanning sources... Finished scanning sources 
-// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
-// TclEventType: PROJECT_NEW
-// WARNING: HEventQueue.dispatchEvent() is taking  1562 ms.
-// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/software/common/Xilinx_Vitis/Vivado/2024.2/data/ip'. 
-// Project name: project_dft; location: /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft; part: xc7z020clg400-1
-dismissDialog("Open Project"); // bh (Open Project Progress)
-// HMemoryUtils.trashcanNow. Engine heap size: 1,815 MB. GUI used memory: 76 MB. Current time: 11/8/25, 10:03:03 PM PST
+// HMemoryUtils.trashcanNow. Engine heap size: 1,720 MB. GUI used memory: 75 MB. Current time: 11/8/25, 11:59:34 PM PST
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+selectButton("FINISH", "Finish", "New Project"); // JButton (FINISH)
+// 'g' command handler elapsed time: 68 seconds
+dismissDialog("Create Project"); // bh (Create Project Progress)
+dismissDialog("New Project"); // f (dialog0)
+// [GUI Memory]: 147 MB (+460kb) [00:02:31]
 selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
 // Run Command: PAResourceCommand.PACommandNames_CORE_GEN
 dismissDialog("Open IP Catalog"); // bh (Open IP Catalog Progress)
-// PAPropertyPanels.initPanels (/software/common/Xilinx_Vitis/SharedData/2024.2/data) elapsed time: 0.2s
+// PAPropertyPanels.initPanels (/software/common/Xilinx_Vitis/SharedData/2024.2/data) elapsed time: 0.5s
 selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "User Repository ;  ;  ;  ; ", 0, "User Repository", 0, true, false, false, false, true, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE) - Popup Trigger - Node
 selectMenuItem(PAResourceAtoD.CoreAndInterfacesBaseTreeTablePanel_ADD_REPOSITORY, "Add Repository..."); // aq (PAResourceAtoD.CoreAndInterfacesBaseTreeTablePanel_ADD_REPOSITORY)
-// Elapsed time: 42 seconds
+// Elapsed time: 28 seconds
 setFolderChooser("/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/dft.comp/hls/impl/ip");
 // TclEventType: PROJECT_CHANGE
 // Tcl Message: set_property  ip_repo_paths  /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/dft.comp/hls/impl/ip [current_project] 
 // TclEventType: CREATE_IP_CATALOG
 // Tcl Message: update_ip_catalog 
 // Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/dft.comp/hls/impl/ip'. 
+// [GUI Memory]: 157 MB (+3196kb) [00:03:16]
 expandTree(RDIResource.AddRepositoryInfoDialog_REPOSITORY_TREE, "[root, /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/dft.comp/hls/impl/ip, <html>IPs<span style='color: rgb(128, 128, 128)'>&nbsp;(1)</span></html>]", 1); // a (RDIResource.AddRepositoryInfoDialog_REPOSITORY_TREE)
 selectButton(RDIResource.AddRepositoryInfoDialog_OK, "OK", "Add Repository"); // a (RDIResource.AddRepositoryInfoDialog_OK)
-dismissDialog("Add Repository"); // b (dialog7)
-// Elapsed time: 17 seconds
+dismissDialog("Add Repository"); // b (dialog2)
+// Elapsed time: 15 seconds
 selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Create Block Design]", 6, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
 // Run Command: PAResourceCommand.PACommandNames_CREATE_NEW_DIAGRAM
-setText(PAResourceAtoD.CreateNewDiagramDialog_DESIGN_NAME, "design_dft"); // ad (PAResourceAtoD.CreateNewDiagramDialog_DESIGN_NAME)
+// Elapsed time: 15 seconds
+setText(PAResourceAtoD.CreateNewDiagramDialog_DESIGN_NAME, "design_dft_fix"); // ad (PAResourceAtoD.CreateNewDiagramDialog_DESIGN_NAME)
 selectButton(RDIResource.BaseDialog_OK, "OK", "Create Block Design"); // a (RDIResource.BaseDialog_OK)
-// 'P' command handler elapsed time: 5 seconds
-dismissDialog("Create Block Design"); // aB (design_dft)
+// 'P' command handler elapsed time: 15 seconds
+dismissDialog("Create Block Design"); // aB (design_dft_fix)
 // TclEventType: LOAD_FEATURE
-// Tcl Message: create_bd_design "design_dft" 
+// Tcl Message: create_bd_design "design_dft_fix" 
 // TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
 // TclEventType: RSB_SAVE_DIAGRAM
 // TclEventType: RSB_LOCK_CHANGE
@@ -238,17 +182,18 @@ dismissDialog("Create Block Design"); // aB (design_dft)
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: RSB_LOCK_CHANGE
 // TclEventType: RSB_OPEN_DIAGRAM
-// Tcl Message: Wrote  : </home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.srcs/sources_1/bd/design_dft/design_dft.bd>  
-// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: Wrote  : </home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.srcs/sources_1/bd/design_dft_fix/design_dft_fix.bd>  
 closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // x (PAResourceOtoP.PAViews_PROJECT_SUMMARY, PlanAheadTabProject Summary)
+// [Engine Memory]: 1,773 MB (+5529kb) [00:03:55]
 dismissDialog("Create Block Design"); // bh (Create Block Design Progress)
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01m:24s
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01m:26s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01m:28s
+// HMemoryUtils.trashcanNow. Engine heap size: 1,808 MB. GUI used memory: 80 MB. Current time: 11/9/25, 12:01:03 AM PST
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01m:30s
 // Tcl Message: update_compile_order -fileset sources_1 
-// [Engine Memory]: 1,853 MB (+4332kb) [00:06:02]
-// HMemoryUtils.trashcanNow. Engine heap size: 1,853 MB. GUI used memory: 80 MB. Current time: 11/8/25, 10:04:28 PM PST
+// Elapsed time: 30 seconds
 selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, (String) null); // C (PAResourceQtoS.SystemBuilderView_ADD_IP)
 setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "dft"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Dft", 0, "Dft", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
 selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Dft", 0, "Dft", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
 selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Dft", 0, "Dft", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
 expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Dft", 0); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
@@ -264,12 +209,11 @@ selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Dft", 0, "Df
 // TclEventType: REPORT_IP_STATUS_STALE
 // TclEventType: RSB_ADD_OBJECT
 // Tcl Message: endgroup 
-// WARNING: HTimer (Open addressing views timer) is taking 133ms to process. Increasing delay to 1300 ms.
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01m:42s
-// HMemoryUtils.trashcanNow. Engine heap size: 1,892 MB. GUI used memory: 82 MB. Current time: 11/8/25, 10:04:43 PM PST
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01m:44s
-runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// WARNING: HTimer (Open addressing views timer) is taking 108ms to process. Increasing delay to 1300 ms.
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 02m:06s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 02m:08s
 selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // C (PAResourceQtoS.SystemBuilderView_ADD_IP, System_RSB_ADD_IP)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,832 MB. GUI used memory: 81 MB. Current time: 11/9/25, 12:01:43 AM PST
 setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "zy"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
 setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "zyn"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
 setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "zynq"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
@@ -286,33 +230,31 @@ selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "ZYNQ7 Proces
 // TclEventType: RSB_SCRIPT_TASK
 // TclEventType: REPORT_IP_STATUS_STALE
 // TclEventType: RSB_ADD_OBJECT
+// [Engine Memory]: 1,883 MB (+21809kb) [00:04:47]
 // No Address Blocks Available for network [Network 0]
 // Tcl Message: endgroup 
-// HMemoryUtils.trashcanNow. Engine heap size: 1,924 MB. GUI used memory: 82 MB. Current time: 11/8/25, 10:04:59 PM PST
 dismissDialog("Add IP"); // bh (Add IP Progress)
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 01m:58s
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 02m:00s
-// Elapsed time: 92 seconds
-runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /processing_system7_0]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "System_zoom_fit"); // C (PAResourceCommand.PACommandNames_ZOOM_FIT, System_zoom_fit)
+// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 02m:20s
+// [Engine Memory]: 2,417 MB (+461337kb) [00:04:51]
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 02m:22s
+// HMemoryUtils.trashcanNow. Engine heap size: 2,417 MB. GUI used memory: 81 MB. Current time: 11/9/25, 12:01:58 AM PST
+// Elapsed time: 14 seconds
 runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /processing_system7_0]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
 runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /processing_system7_0]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
 // Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
 dismissDialog("Re-customize IP"); // C (Re-customize IP Progress)
-// HMemoryUtils.trashcanNow. Engine heap size: 1,970 MB. GUI used memory: 91 MB. Current time: 11/8/25, 10:06:34 PM PST
-// [Engine Memory]: 1,970 MB (+25553kb) [00:08:08]
-// Elapsed time: 18 seconds
+// Elapsed time: 21 seconds
 selectTreeTable(PAResourceEtoH.GenSettingTreeTablePanel_GEN_SETTING_TREE_TABLE, "S AXI HP0 interface ; 0 ; Enables AXI high performance slave interface 0", 4, "0", 1, true); // ae (PAResourceEtoH.GenSettingTreeTablePanel_GEN_SETTING_TREE_TABLE) - Node
-// Elapsed time: 27 seconds
 selectButton(RDIResource.BaseDialog_OK, "OK", "Re-customize IP"); // a (RDIResource.BaseDialog_OK)
-dismissDialog("Re-customize IP"); // m (dialog8)
+dismissDialog("Re-customize IP"); // m (dialog3)
 // TclEventType: RSB_PROPERTY_CHANGE
 // No Address Blocks Available for network [Network 0]
 // TclEventType: RSB_PROPERTY_CHANGE
 // No Address Blocks Available for network [Network 0]
 // TclEventType: RSB_PROPERTY_CHANGE
 // No Address Blocks Available for network [Network 0]
-// TclEventType: RSB_PROPERTY_CHANGE
-// Tcl Message: set_property CONFIG.PCW_USE_S_AXI_HP0 {1} [get_bd_cells processing_system7_0] 
 // TclEventType: RSB_PROPERTY_CHANGE
 // No Address Blocks Available for network [Network 0]
 // TclEventType: RSB_PROPERTY_CHANGE
@@ -324,10 +266,9 @@ dismissDialog("Re-customize IP"); // m (dialog8)
 // TclEventType: RSB_REMOVE_ADDRNETWORK
 // TclEventType: RSB_PROPERTY_CHANGE
 // No Address Blocks Available for network [Network 0]
-dismissDialog("Customize IP"); // bh (Customize IP Progress)
-// Elapsed time: 15 seconds
+// Tcl Message: set_property CONFIG.PCW_USE_S_AXI_HP0 {1} [get_bd_cells processing_system7_0] 
+// Elapsed time: 10 seconds
 selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // C (PAResourceQtoS.SystemBuilderView_ADD_IP, System_RSB_ADD_IP)
-// Elapsed time: 113 seconds
 setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "dma"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
 selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Direct Memory Access", 1, "AXI Direct Memory Access", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
 selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Direct Memory Access", 1, "AXI Direct Memory Access", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
@@ -346,14 +287,14 @@ selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Direct M
 // Tcl Message: startgroup 
 // Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_0 
 // Tcl Message: endgroup 
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 06m:32s
-// HMemoryUtils.trashcanNow. Engine heap size: 2,012 MB. GUI used memory: 98 MB. Current time: 11/8/25, 10:09:33 PM PST
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 06m:34s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 03m:18s
 selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "System_zoom_fit"); // C (PAResourceCommand.PACommandNames_ZOOM_FIT, System_zoom_fit)
 // Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
-// Elapsed time: 28 seconds
+// [GUI Memory]: 169 MB (+4611kb) [00:05:48]
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 03m:20s
 selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // C (PAResourceQtoS.SystemBuilderView_ADD_IP, System_RSB_ADD_IP)
 setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "dma"); // OverlayTextField (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Direct Memory Access", 1, "AXI Direct Memory Access", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
 selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Direct Memory Access", 1, "AXI Direct Memory Access", 0, false); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
 expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Direct Memory Access", 1); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE)
 selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Direct Memory Access", 1, "AXI Direct Memory Access", 0, false, false, false, false, false, true); // z (PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE) - Double Click
@@ -370,22 +311,21 @@ selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "AXI Direct M
 // Tcl Message: startgroup 
 // Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:axi_dma:7.1 axi_dma_1 
 // Tcl Message: endgroup 
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 07m:14s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 03m:28s
 selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "System_zoom_fit"); // C (PAResourceCommand.PACommandNames_ZOOM_FIT, System_zoom_fit)
 // Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 07m:16s
-// Elapsed time: 18 seconds
-runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /axi_dma_1/mm2s_cntrl_reset_out_n]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
-runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /axi_dma_1/mm2s_cntrl_reset_out_n]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 03m:30s
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /axi_dma_1/s2mm_sts_reset_out_n]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_pins /axi_dma_1/s2mm_sts_reset_out_n]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
 // Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_PIN
 selectButton(RDIResource.BaseDialog_CANCEL, "Cancel", "Customize Pin"); // a (RDIResource.BaseDialog_CANCEL)
-dismissDialog("Customize Pin"); // m (dialog9)
+dismissDialog("Customize Pin"); // m (dialog4)
 runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_1]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
 runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_1]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
 // Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
 selectCheckBox((HResource) null, "Enable Scatter Gather Engine", false); // f: FALSE
 selectButton(RDIResource.BaseDialog_OK, "OK", "Re-customize IP"); // a (RDIResource.BaseDialog_OK)
-dismissDialog("Re-customize IP"); // m (dialog10)
+dismissDialog("Re-customize IP"); // m (dialog5)
 // TclEventType: RSB_REMOVE_ADDRNETWORK
 // TclEventType: RSB_PROPERTY_CHANGE
 // No Address Blocks Available for network [Network 0]
@@ -394,20 +334,19 @@ dismissDialog("Re-customize IP"); // m (dialog10)
 // TclEventType: RSB_PROPERTY_CHANGE
 // No Address Blocks Available for network [Network 0]
 // TclEventType: RSB_SCRIPT_TASK
-// Tcl Message: set_property CONFIG.c_include_sg {0} [get_bd_cells axi_dma_1] 
-// TclEventType: RSB_SCRIPT_TASK
+// [GUI Memory]: 178 MB (+407kb) [00:06:15]
 // No Address Blocks Available for network [Network 0]
 // TclEventType: RSB_PROPERTY_CHANGE
 // No Address Blocks Available for network [Network 0]
+// Tcl Message: set_property CONFIG.c_include_sg {0} [get_bd_cells axi_dma_1] 
 dismissDialog("Customize IP"); // bh (Customize IP Progress)
-// HMemoryUtils.trashcanNow. Engine heap size: 2,032 MB. GUI used memory: 103 MB. Current time: 11/8/25, 10:10:48 PM PST
-runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
+// [GUI Memory]: 190 MB (+2544kb) [00:06:16]
 runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
 runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_0]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
 // Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
 selectCheckBox((HResource) null, "Enable Scatter Gather Engine", false); // f: FALSE
 selectButton(RDIResource.BaseDialog_OK, "OK", "Re-customize IP"); // a (RDIResource.BaseDialog_OK)
-dismissDialog("Re-customize IP"); // m (dialog11)
+dismissDialog("Re-customize IP"); // m (dialog6)
 // TclEventType: RSB_REMOVE_ADDRNETWORK
 // TclEventType: RSB_PROPERTY_CHANGE
 // No Address Blocks Available for network [Network 0]
@@ -420,16 +359,7 @@ dismissDialog("Re-customize IP"); // m (dialog11)
 // TclEventType: RSB_PROPERTY_CHANGE
 // No Address Blocks Available for network [Network 0]
 // Tcl Message: set_property CONFIG.c_include_sg {0} [get_bd_cells axi_dma_0] 
-// [GUI Memory]: 187 MB (+12410kb) [00:12:31]
-dismissDialog("Customize IP"); // bh (Customize IP Progress)
-runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_1]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
-runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "select_objects [get_bd_cells /axi_dma_1]"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
-// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
-// [Engine Memory]: 2,642 MB (+601205kb) [00:12:33]
-selectButton(RDIResource.BaseDialog_OK, "OK", "Re-customize IP"); // a (RDIResource.BaseDialog_OK)
-dismissDialog("Re-customize IP"); // m (dialog12)
-// [GUI Memory]: 198 MB (+2688kb) [00:13:40]
-// Elapsed time: 66 seconds
+// Elapsed time: 18 seconds
 runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
 // TclEventType: RSB_REMOVE_ADDRNETWORK
 // TclEventType: RSB_CONNECTION_CHANGE
@@ -442,26 +372,22 @@ runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gh (PAReso
 // TclEventType: RSB_REMOVE_ADDRNETWORK
 // TclEventType: RSB_CONNECTION_CHANGE
 // No Address Blocks Available for network [Network 0]
-// Tcl Message: connect_bd_intf_net [get_bd_intf_pins axi_dma_1/S_AXIS_S2MM] [get_bd_intf_pins dft_0/imag_op] 
-// Elapsed time: 240 seconds
-selectButton(PAResourceCommand.PACommandNames_ZOOM_FIT, "System_zoom_fit"); // C (PAResourceCommand.PACommandNames_ZOOM_FIT, System_zoom_fit)
-// Run Command: PAResourceCommand.PACommandNames_ZOOM_FIT
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins dft_0/real_op] [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] 
 // TclEventType: RSB_REMOVE_ADDRNETWORK
 // TclEventType: RSB_CONNECTION_CHANGE
 // No Address Blocks Available for network [Network 0]
-// Tcl Message: connect_bd_intf_net [get_bd_intf_pins axi_dma_0/S_AXIS_S2MM] [get_bd_intf_pins dft_0/real_op] 
-// Elapsed time: 161 seconds
+// Tcl Message: connect_bd_intf_net [get_bd_intf_pins dft_0/imag_op] [get_bd_intf_pins axi_dma_1/S_AXIS_S2MM] 
+// Elapsed time: 178 seconds
 selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_BLOCK_AUTOMATION, "Run Block Automation"); // h (PAResourceQtoS.RSBApplyAutomationBar_RUN_BLOCK_AUTOMATION)
-// Elapsed time: 18 seconds
 selectButton(RDIResource.BaseDialog_OK, "OK", "Run Block Automation"); // a (RDIResource.BaseDialog_OK)
-dismissDialog("Run Block Automation"); // G (dialog13)
+dismissDialog("Run Block Automation"); // G (dialog7)
 // TclEventType: RSB_SCRIPT_TASK
 // No Address Blocks Available for network [Network 0]
 // Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0] 
 selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // h (PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION)
 selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (4 out of 4 selected)]", 0, true, true, ui.utils.collection.couples.TriState.True); // G.c (PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE) - Node
 selectButton(RDIResource.BaseDialog_OK, "OK", "Run Connection Automation"); // a (RDIResource.BaseDialog_OK)
-dismissDialog("Run Connection Automation"); // G (dialog14)
+dismissDialog("Run Connection Automation"); // G (dialog8)
 // TclEventType: XGUI_UPDATE_GUI_ELEMENT
 // Tcl Message: startgroup 
 // Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_dma_0/S_AXI_LITE} ddr_seg {Auto} intc_ip {New AXI SmartConnect} master_apm {0}}  [get_bd_intf_pins axi_dma_0/S_AXI_LITE] 
@@ -523,13 +449,14 @@ dismissDialog("Run Connection Automation"); // G (dialog14)
 // Tcl Message: Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/axi_dma_0/Data_MM2S' at <0x0000_0000 [ 512M ]>. 
 // Tcl Message: endgroup 
 dismissDialog("Run Connection Automation"); // bh (Run Connection Automation Progress)
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 16m:34s
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 16m:36s
-// HMemoryUtils.trashcanNow. Engine heap size: 2,669 MB. GUI used memory: 108 MB. Current time: 11/8/25, 10:19:38 PM PST
+// [GUI Memory]: 200 MB (+1275kb) [00:10:00]
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 07m:32s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 07m:34s
 selectButton(PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION, "Run Connection Automation"); // h (PAResourceQtoS.RSBApplyAutomationBar_RUN_CONNECTION_AUTOMATION)
 selectCheckBoxTree(PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE, "[All Automation (3 out of 3 selected)]", 0, true, true, ui.utils.collection.couples.TriState.True); // G.c (PAResourceAtoD.ApplyRSBMultiAutomationDialog_CHECKBOX_TREE) - Node
 selectButton(RDIResource.BaseDialog_OK, "OK", "Run Connection Automation"); // a (RDIResource.BaseDialog_OK)
-dismissDialog("Run Connection Automation"); // G (dialog15)
+dismissDialog("Run Connection Automation"); // G (dialog9)
+// Tcl Message: startgroup 
 // TclEventType: XGUI_UPDATE_GUI_ELEMENT
 // TclEventType: RSB_REMOVE_ADDRNETWORK
 // TclEventType: RSB_SCRIPT_TASK
@@ -548,10 +475,9 @@ dismissDialog("Run Connection Automation"); // G (dialog15)
 // TclEventType: RSB_REMOVE_OBJECT
 // TclEventType: RSB_SCRIPT_TASK
 // TclEventType: RSB_REMOVE_OBJECT
-// Tcl Message: startgroup 
-// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/axi_dma_0/M_AXI_S2MM} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_S2MM] 
 // TclEventType: REPORT_IP_STATUS_STALE
 // TclEventType: DG_GRAPH_STALE
+// Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/axi_dma_0/M_AXI_S2MM} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins axi_dma_0/M_AXI_S2MM] 
 // TclEventType: RSB_SCRIPT_TASK
 // TclEventType: REPORT_IP_STATUS_STALE
 // TclEventType: RSB_SCRIPT_TASK
@@ -560,48 +486,46 @@ dismissDialog("Run Connection Automation"); // G (dialog15)
 // TclEventType: RSB_CONNECTION_CHANGE
 // TclEventType: RSB_SCRIPT_TASK
 // TclEventType: XGUI_UPDATE_GUI_ELEMENT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
 // TclEventType: RSB_REMOVE_ADDRNETWORK
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_REMOVE_OBJECT
-// TclEventType: RSB_SCRIPT_TASK
 // TclEventType: RSB_PROPERTY_CHANGE
-// TclEventType: RSB_REMOVE_ADDRNETWORK
 // TclEventType: RSB_CONNECTION_CHANGE
 // TclEventType: RSB_SCRIPT_TASK
 // TclEventType: XGUI_UPDATE_GUI_ELEMENT
-// TclEventType: RSB_REMOVE_ADDRNETWORK
 // TclEventType: RSB_SCRIPT_TASK
 // TclEventType: RSB_REMOVE_OBJECT
 // TclEventType: RSB_SCRIPT_TASK
@@ -648,14 +572,15 @@ dismissDialog("Run Connection Automation"); // G (dialog15)
 // TclEventType: RSB_REMOVE_OBJECT
 // TclEventType: RSB_SCRIPT_TASK
 // Tcl Message: INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm 
+// TclEventType: RSB_SCRIPT_TASK
 // Tcl Message: Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/axi_dma_0/Data_S2MM' at <0x0000_0000 [ 512M ]>. 
 // Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/axi_dma_1/M_AXI_MM2S} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins axi_dma_1/M_AXI_MM2S] 
 // Tcl Message: INFO: [BD 41-3093] Triggering Legacy Auto Assign Algorithm 
 // Tcl Message: Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/axi_dma_1/Data_MM2S' at <0x0000_0000 [ 512M ]>. 
 // Tcl Message: apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/axi_dma_1/M_AXI_S2MM} Slave {/processing_system7_0/S_AXI_HP0} ddr_seg {Auto} intc_ip {/axi_mem_intercon} master_apm {0}}  [get_bd_intf_pins axi_dma_1/M_AXI_S2MM] 
 // TclEventType: RSB_SCRIPT_TASK
-// TclEventType: RSB_PROPERTY_CHANGE
 // TclEventType: RSB_REMOVE_ADDRNETWORK
+// TclEventType: RSB_PROPERTY_CHANGE
 // TclEventType: RSB_CONNECTION_CHANGE
 // TclEventType: RSB_SCRIPT_TASK
 // TclEventType: XGUI_RESET_GUI_ELEMENT
@@ -663,12 +588,9 @@ dismissDialog("Run Connection Automation"); // G (dialog15)
 // Tcl Message: Slave segment '/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM' is being assigned into address space '/axi_dma_1/Data_S2MM' at <0x0000_0000 [ 512M ]>. 
 // Tcl Message: endgroup 
 dismissDialog("Run Connection Automation"); // bh (Run Connection Automation Progress)
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 16m:48s
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 16m:50s
-// Elapsed time: 52 seconds
-selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 243, 407, 898, 647, false, false, false, true, false); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem) - Popup Trigger
-runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
-// Elapsed time: 33 seconds
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 07m:44s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 07m:46s
+// Elapsed time: 29 seconds
 selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ai (PAResourceItoN.MainMenuMgr_FILE, File)
 selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // an (PAResourceItoN.MainMenuMgr_PROJECT, Project)
 selectMenuItem(PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN, "Save Block Design"); // aq (PAResourceCommand.PACommandNames_SAVE_RSB_DESIGN, save_rsb_design_menu)
@@ -683,13 +605,11 @@ dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ai (PAResourceItoN.Main
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: COMPOSITE_FILE_CHANGE
 // TclEventType: RSB_SAVE_DIAGRAM
-// Tcl Message: Wrote  : </home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.srcs/sources_1/bd/design_dft/design_dft.bd>  Wrote  : </home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.srcs/sources_1/bd/design_dft/ui/bd_fa0791.ui>  
+// Tcl Message: Wrote  : </home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.srcs/sources_1/bd/design_dft_fix/design_dft_fix.bd>  Wrote  : </home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.srcs/sources_1/bd/design_dft_fix/ui/bd_c7216a27.ui>  
 dismissDialog("Save Design"); // bh (Save Design Progress)
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 18m:22s
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 18m:24s
-selectMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ai (PAResourceItoN.MainMenuMgr_TOOLS, Tools)
-selectMenuItem(PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, "Validate Design"); // aq (PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, validate_bd_design_rsb_menu)
-dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ai (PAResourceItoN.MainMenuMgr_TOOLS, Tools)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 08m:16s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 08m:18s
+selectButton(PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, "System_validate_bd_design_rsb"); // C (PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN, System_validate_bd_design_rsb)
 // Run Command: PAResourceCommand.PACommandNames_VALIDATE_RSB_DESIGN
 // Tcl Command: 'validate_bd_design'
 // TclEventType: RSB_VALIDATE_DIAGRAM
@@ -805,7 +725,7 @@ dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ai (PAResourceItoN.Ma
 // TclEventType: RSB_SCRIPT_TASK
 // TclEventType: RSB_CLOSE_DIAGRAM
 // TclEventType: REPORT_IP_STATUS_STALE
-// Tcl Message: INFO: [BD 5-943] Reserving offset range <0x41E0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing. INFO: [BD 5-943] Reserving offset range <0x41E1_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M01_AXI'. This will be used by smartconnect on path for routing. INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M02_AXI'. This will be used by smartconnect on path for routing. INFO: [xilinx.com:ip:smartconnect:1.0-1] design_dft_axi_smc_0: SmartConnect design_dft_axi_smc_0 is in Low-Area Mode. 
+// Tcl Message: INFO: [BD 5-943] Reserving offset range <0x41E0_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M00_AXI'. This will be used by smartconnect on path for routing. INFO: [BD 5-943] Reserving offset range <0x41E1_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M01_AXI'. This will be used by smartconnect on path for routing. INFO: [BD 5-943] Reserving offset range <0x4000_0000 [ 64K ]> from slave interface '/axi_smc/S00_AXI' to master interface '/axi_smc/M02_AXI'. This will be used by smartconnect on path for routing. INFO: [xilinx.com:ip:smartconnect:1.0-1] design_dft_fix_axi_smc_0: SmartConnect design_dft_fix_axi_smc_0 is in Low-Area Mode. 
 // TclEventType: REPORT_IP_STATUS_STALE
 // TclEventType: RSB_SCRIPT_TASK
 // TclEventType: RSB_REMOVE_OBJECT
@@ -820,82 +740,69 @@ dismissMenu(PAResourceItoN.MainMenuMgr_TOOLS, "Tools"); // ai (PAResourceItoN.Ma
 // TclEventType: RSB_REMOVE_ADDRNETWORK
 // TclEventType: RSB_SCRIPT_TASK
 // TclEventType: COMPOSITE_FILE_CHANGE
-// Tcl Message: validate_bd_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 8319.551 ; gain = 142.031 ; free physical = 6997 ; free virtual = 19972 
-// Elapsed time: 13 seconds
+// Tcl Message: validate_bd_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 8281.309 ; gain = 78.039 ; free physical = 13153 ; free virtual = 20429 
+// Elapsed time: 11 seconds
 dismissDialog("Validate Design"); // bh (Validate Design Progress)
 selectButton("OptionPane.button", "OK", "Validate Design"); // JButton (OptionPane.button)
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 18m:46s
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 18m:48s
-// Elapsed time: 23 seconds
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 08m:36s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 08m:38s
+// Elapsed time: 29 seconds
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_dft_fix]", 0, true, false, false, false, true, false); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE) - Popup Trigger - Node
+selectTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_dft_fix, Nets]", 3, true); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE) - Node
+// Elapsed time: 14 seconds
 selectTab((HResource) null, (HResource) null, "Sources", 0); // aa
-selectTab((HResource) null, (String) null, (HResource) null, "Sources", 0, true, false); // aa - Popup Trigger
 expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft (design_dft.bd)]", 1, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_fix (design_dft_fix.bd)]", 1, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
 selectMenu(PAResourceCommand.PACommandNames_OPEN_FILE_WITH, "Open With"); // an (PAResourceCommand.PACommandNames_OPEN_FILE_WITH, Open With)
 selectMenuItem(PAResourceCommand.PACommandNames_CREATE_TOP_HDL, "Create HDL Wrapper..."); // aq (PAResourceCommand.PACommandNames_CREATE_TOP_HDL, create_top_hdl_menu)
 // Run Command: PAResourceCommand.PACommandNames_CREATE_TOP_HDL
-// Elapsed time: 17 seconds
+// Elapsed time: 20 seconds
 selectButton(RDIResource.BaseDialog_OK, "OK", "Create HDL Wrapper"); // a (RDIResource.BaseDialog_OK)
-// 'af' command handler elapsed time: 17 seconds
-dismissDialog("Create HDL Wrapper"); // a (dialog16)
+// 'af' command handler elapsed time: 20 seconds
+dismissDialog("Create HDL Wrapper"); // a (dialog10)
 // TclEventType: RSB_SCRIPT_TASK
 // TclEventType: RSB_SAVE_DIAGRAM
-// Tcl Message: make_wrapper -files [get_files /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.srcs/sources_1/bd/design_dft/design_dft.bd] -top 
-// Tcl Message: INFO: [BD 41-1662] The design 'design_dft.bd' is already validated. Therefore parameter propagation will not be re-run. 
+// Tcl Message: make_wrapper -files [get_files /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.srcs/sources_1/bd/design_dft_fix/design_dft_fix.bd] -top 
+// Tcl Message: INFO: [BD 41-1662] The design 'design_dft_fix.bd' is already validated. Therefore parameter propagation will not be re-run. 
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: RSB_SAVE_DIAGRAM
-// Tcl Message: Wrote  : </home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.srcs/sources_1/bd/design_dft/design_dft.bd>  Wrote  : </home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.srcs/sources_1/bd/design_dft/ui/bd_fa0791.ui>  
+// Tcl Message: Wrote  : </home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.srcs/sources_1/bd/design_dft_fix/design_dft_fix.bd>  Wrote  : </home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.srcs/sources_1/bd/design_dft_fix/ui/bd_c7216a27.ui>  
 // TclEventType: RSB_SAVE_DIAGRAM
 // TclEventType: RSB_SCRIPT_TASK
-// Tcl Message: Verilog Output written to : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.gen/sources_1/bd/design_dft/synth/design_dft.v 
-// Tcl Message: Verilog Output written to : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.gen/sources_1/bd/design_dft/sim/design_dft.v Verilog Output written to : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.gen/sources_1/bd/design_dft/hdl/design_dft_wrapper.v 
+// Tcl Message: Verilog Output written to : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.gen/sources_1/bd/design_dft_fix/synth/design_dft_fix.v 
+// Tcl Message: Verilog Output written to : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.gen/sources_1/bd/design_dft_fix/sim/design_dft_fix.v Verilog Output written to : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.gen/sources_1/bd/design_dft_fix/hdl/design_dft_fix_wrapper.v 
+// Tcl Message: make_wrapper: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 8347.656 ; gain = 55.352 ; free physical = 13082 ; free virtual = 20368 
 // TclEventType: FILE_SET_CHANGE
-// Create Top HDL Elapsed Time: 4.5s
-// Tcl Message: add_files -norecurse /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.gen/sources_1/bd/design_dft/hdl/design_dft_wrapper.v 
+// Create Top HDL Elapsed Time: 5.6s
+// Tcl Message: add_files -norecurse /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.gen/sources_1/bd/design_dft_fix/hdl/design_dft_fix_wrapper.v 
 dismissDialog("Create HDL Wrapper"); // bh (Create HDL Wrapper Progress)
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 19m:40s
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 19m:46s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 10m:04s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 10m:10s
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: DG_GRAPH_STALE
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 19m:48s
-// Elapsed time: 10 seconds
-expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 19m:50s
-expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v), design_dft_i : design_dft (design_dft.bd), design_dft (design_dft.v)]", 3); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v), design_dft_i : design_dft (design_dft.bd), design_dft (design_dft.v)]", 3); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-// Elapsed time: 18 seconds
-expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v), design_dft_i : design_dft (design_dft.bd), design_dft (design_dft.v)]", 3); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v), design_dft_i : design_dft (design_dft.bd), design_dft (design_dft.v)]", 3); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v)]", 1, true, false, false, false, true, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Popup Trigger - Node
-selectMenu(PAResourceCommand.PACommandNames_OPEN_FILE_WITH, "Open With"); // an (PAResourceCommand.PACommandNames_OPEN_FILE_WITH, Open With)
-runTclCommand (PAResourceOtoP.PAViews_SYSTEM, "unselect_objects"); // gh (PAResourceOtoP.PAViews_SYSTEM, PlanAheadTabSystem)
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
-// Elapsed time: 12 seconds
-selectTab((HResource) null, (HResource) null, "Design", 1); // aa
-selectTab((HResource) null, (HResource) null, "Sources", 0); // aa
-selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Address Editor", 1); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
-selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // o (PlanAheadTabBaseWorkspace_JideTabbedPane)
-// Elapsed time: 26 seconds
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 10m:12s
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 10m:14s
+// Elapsed time: 24 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_fix_wrapper (design_dft_fix_wrapper.v)]", 1, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
+// Elapsed time: 14 seconds
 selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 21, false); // g (PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, Flow Navigator Tree)
 // Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
 selectButton(RDIResource.BaseDialog_YES, "Yes", "No Implementation Results Available"); // a (RDIResource.BaseDialog_YES)
-// 'cM' command handler elapsed time: 6 seconds
-dismissDialog("No Implementation Results Available"); // u (dialog17)
+dismissDialog("No Implementation Results Available"); // u (dialog11)
 dismissDialog("Resetting Runs"); // bh (Resetting Runs Progress)
 // TclEventType: RSB_SCRIPT_TASK
 // TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
+// Tcl Message: INFO: [BD 41-1662] The design 'design_dft_fix.bd' is already validated. Therefore parameter propagation will not be re-run. 
+// Tcl Message: Verilog Output written to : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.gen/sources_1/bd/design_dft_fix/synth/design_dft_fix.v 
+// Tcl Message: Verilog Output written to : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.gen/sources_1/bd/design_dft_fix/sim/design_dft_fix.v 
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: RSB_SAVE_DIAGRAM
 // TclEventType: RSB_SCRIPT_TASK
-// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 8 
-// Tcl Message: INFO: [BD 41-1662] The design 'design_dft.bd' is already validated. Therefore parameter propagation will not be re-run. 
-// Tcl Message: Verilog Output written to : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.gen/sources_1/bd/design_dft/synth/design_dft.v 
-// Tcl Message: Verilog Output written to : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.gen/sources_1/bd/design_dft/sim/design_dft.v Verilog Output written to : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.gen/sources_1/bd/design_dft/hdl/design_dft_wrapper.v 
 // TclEventType: COMPOSITE_FILE_CHANGE
+// Tcl Message: Verilog Output written to : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.gen/sources_1/bd/design_dft_fix/hdl/design_dft_fix_wrapper.v 
 // Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block dft_0 . 
 // Tcl Message: INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created. INFO: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'S_AXI_HP0'. A default connection has been created. 
 // TclEventType: COMPOSITE_FILE_CHANGE
@@ -903,10 +810,7 @@ dismissDialog("Resetting Runs"); // bh (Resetting Runs Progress)
 // TclEventType: COMPOSITE_FILE_CHANGE
 // Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_dma_1 . 
 // TclEventType: COMPOSITE_FILE_CHANGE
-// Tcl Message: Exporting to file /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.gen/sources_1/bd/design_dft/ip/design_dft_axi_smc_0/bd_0/hw_handoff/design_dft_axi_smc_0.hwh Generated Hardware Definition File /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.gen/sources_1/bd/design_dft/ip/design_dft_axi_smc_0/bd_0/synth/design_dft_axi_smc_0.hwdef 
-// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M . 
-// TclEventType: COMPOSITE_FILE_CHANGE
-// HMemoryUtils.trashcanNow. Engine heap size: 2,402 MB. GUI used memory: 113 MB. Current time: 11/8/25, 10:24:56 PM PST
+// Tcl Message: Exporting to file /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.gen/sources_1/bd/design_dft_fix/ip/design_dft_fix_axi_smc_0/bd_0/hw_handoff/design_dft_fix_axi_smc_0.hwh Generated Hardware Definition File /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.gen/sources_1/bd/design_dft_fix/ip/design_dft_fix_axi_smc_0/bd_0/synth/design_dft_fix_axi_smc_0.hwdef 
 // TclEventType: COMPOSITE_FILE_CHANGE
 // TclEventType: RSB_SCRIPT_TASK
 // TclEventType: COMPOSITE_FILE_CHANGE
@@ -916,13 +820,16 @@ dismissDialog("Resetting Runs"); // bh (Resetting Runs Progress)
 // TclEventType: FILE_SET_NEW
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: RUN_ADD
-// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar . 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_smc . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/xbar . 
 // Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s00_couplers/auto_us . 
 // Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s01_couplers/auto_us . 
 // Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s02_couplers/auto_us . 
 // Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/s03_couplers/auto_us . 
 // Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_mem_intercon/m00_couplers/auto_pc . 
-// Tcl Message: Exporting to file /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.gen/sources_1/bd/design_dft/hw_handoff/design_dft.hwh Generated Hardware Definition File /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.gen/sources_1/bd/design_dft/synth/design_dft.hwdef 
+// Tcl Message: Exporting to file /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.gen/sources_1/bd/design_dft_fix/hw_handoff/design_dft_fix.hwh Generated Hardware Definition File /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.gen/sources_1/bd/design_dft_fix/synth/design_dft_fix.hwdef 
 // TclEventType: RUN_ADD
 // TclEventType: FILE_SET_NEW
 // TclEventType: FILE_SET_CHANGE
@@ -942,6 +849,7 @@ dismissDialog("Resetting Runs"); // bh (Resetting Runs Progress)
 // TclEventType: FILE_SET_NEW
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: RUN_ADD
+// [Engine Memory]: 2,552 MB (+15255kb) [00:13:42]
 // TclEventType: FILE_SET_NEW
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: RUN_ADD
@@ -951,9 +859,7 @@ dismissDialog("Resetting Runs"); // bh (Resetting Runs Progress)
 // TclEventType: FILE_SET_NEW
 // TclEventType: FILE_SET_CHANGE
 // TclEventType: RUN_ADD
-// TclEventType: FILE_SET_NEW
-// TclEventType: FILE_SET_CHANGE
-// TclEventType: RUN_ADD
+// HMemoryUtils.trashcanNow. Engine heap size: 2,632 MB. GUI used memory: 112 MB. Current time: 11/9/25, 12:10:48 AM PST
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: COMPOSITE_FILE_CHANGE
 // TclEventType: RUN_LAUNCH
@@ -985,160 +891,136 @@ dismissDialog("Resetting Runs"); // bh (Resetting Runs Progress)
 // TclEventType: RUN_STATUS_CHANGE
 // TclEventType: RUN_MODIFY
 // TclEventType: RUN_STATUS_CHANGE
-// Tcl Message: [Sat Nov  8 22:25:11 2025] Launched impl_1... Run output will be captured here: /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft/project_dft.runs/impl_1/runme.log 
+// TclEventType: RUN_MODIFY
 // TclEventType: RUN_STATUS_CHANGE
-// Tcl Message: launch_runs: Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 8885.641 ; gain = 406.938 ; free physical = 6800 ; free virtual = 19833 
+// TclEventType: RUN_MODIFY
 // TclEventType: RUN_STATUS_CHANGE
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/cM.a': 45s
-// TclEventType: RUN_STATUS_CHANGE
-// Elapsed time: 45 seconds
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Sun Nov  9 00:11:00 2025] Launched impl_1... Run output will be captured here: /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft_fix/project_dft_fix.runs/impl_1/runme.log 
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:38 ; elapsed = 00:00:42 . Memory (MB): peak = 8852.508 ; gain = 367.789 ; free physical = 12713 ; free virtual = 20096 
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/cM.a': 42s
+// Elapsed time: 42 seconds
 dismissDialog("Generate Bitstream"); // bh (Generate Bitstream Progress)
-// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 22m:12s
-// Elapsed time: 150 seconds
-selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 472, 103); // cD (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)
-// Elapsed time: 11 seconds
-expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v), design_dft_i : design_dft (design_dft.bd), design_dft (design_dft.v)]", 3); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v), design_dft_i : design_dft (design_dft.bd), design_dft (design_dft.v)]", 3); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-// Elapsed time: 10 seconds
-expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v), design_dft_i : design_dft (design_dft.bd), design_dft (design_dft.v)]", 3); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v), design_dft_i : design_dft (design_dft.bd), design_dft (design_dft.v), processing_system7_0 : design_dft_processing_system7_0_0 (design_dft_processing_system7_0_0.xci)]", 10, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-selectTab((HResource) null, (HResource) null, "Design", 1); // aa
-// Elapsed time: 13 seconds
-expandTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_dft, dft_0]", 8); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE)
-collapseTree(PAResourceQtoS.SystemTreeView_SYSTEM_TREE, "[design_dft, dft_0]", 8); // a (PAResourceQtoS.SystemTreeView_SYSTEM_TREE)
-selectTab((HResource) null, (HResource) null, "Sources", 0); // aa
-collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v)]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v), design_dft_i : design_dft (design_dft.bd), design_dft (design_dft.v)]", 3, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
-// TclEventType: FILE_SET_CHANGE
-// Elapsed time: 15 seconds
-selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, PAResourceEtoH.FileSetView_INSERT_TAB_IP_PANEL, "IP Sources", 1); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
-expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, design_dft]", 1); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-// TclEventType: RUN_COMPLETED
 // TclEventType: RUN_STATUS_CHANGE
-// TclEventType: RUN_STEP_COMPLETED
-// TclEventType: RUN_STATUS_CHANGE
-expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, design_dft, Implementation]", 4); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Block Designs, design_dft, Implementation]", 4); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, PAResourceEtoH.FileSetView_ADD_TAB, "Libraries", 2); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
-selectTab(PAResourceEtoH.FileSetView_TABBED_PANE, PAResourceEtoH.FileSetView_INSERT_TAB, "Hierarchy", 0); // g (PAResourceEtoH.FileSetView_TABBED_PANE, SourcesView)
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v), design_dft_i : design_dft (design_dft.bd), design_dft (design_dft.v), axi_smc : design_dft_axi_smc_0 (design_dft_axi_smc_0.xci)]", 8, false); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE)
-// TclEventType: FILE_SET_CHANGE
-// TclEventType: RUN_COMPLETED
-// TclEventType: RUN_STATUS_CHANGE
-// TclEventType: RUN_STEP_COMPLETED
-// TclEventType: RUN_STATUS_CHANGE
-// TclEventType: RUN_COMPLETED
-// TclEventType: RUN_STATUS_CHANGE
-// TclEventType: RUN_STEP_COMPLETED
-// TclEventType: RUN_STATUS_CHANGE
-// Elapsed time: 16 seconds
-selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, design_dft_wrapper (design_dft_wrapper.v), design_dft_i : design_dft (design_dft.bd), design_dft (design_dft.v)]", 3, true); // E (PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE) - Node
-// TclEventType: FILE_SET_CHANGE
-// TclEventType: RUN_COMPLETED
-// TclEventType: RUN_STATUS_CHANGE
-// TclEventType: RUN_STEP_COMPLETED
-// TclEventType: FILE_SET_CHANGE
-// [GUI Memory]: 221 MB (+13397kb) [00:31:22]
-// TclEventType: RUN_COMPLETED
-// TclEventType: RUN_STATUS_CHANGE
-// TclEventType: RUN_STEP_COMPLETED
-// TclEventType: FILE_SET_CHANGE
-// TclEventType: RUN_COMPLETED
-// TclEventType: RUN_STATUS_CHANGE
-// TclEventType: RUN_STEP_COMPLETED
-// TclEventType: FILE_SET_CHANGE
-// [GUI Memory]: 238 MB (+5479kb) [00:32:05]
-// TclEventType: FILE_SET_CHANGE
-// TclEventType: RUN_COMPLETED
-// TclEventType: RUN_STATUS_CHANGE
-// TclEventType: RUN_STEP_COMPLETED
-// TclEventType: RUN_COMPLETED
-// TclEventType: RUN_STATUS_CHANGE
-// TclEventType: RUN_STEP_COMPLETED
-// TclEventType: RUN_COMPLETED
-// TclEventType: RUN_STATUS_CHANGE
-// TclEventType: RUN_STEP_COMPLETED
-// TclEventType: RUN_STATUS_CHANGE
-// TclEventType: RUN_COMPLETED
-// TclEventType: RUN_STATUS_CHANGE
-// TclEventType: RUN_STEP_COMPLETED
-// TclEventType: FILE_SET_CHANGE
-// Elapsed time: 96 seconds
-selectCodeEditor(RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR, 236, 114); // cD (RDIResource.TclConsoleView_TCL_CONSOLE_CODE_EDITOR)
+// Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/L.f': 11m:28s
+// Elapsed time: 110 seconds
 selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aa
-// TclEventType: RUN_STATUS_CHANGE
-// TclEventType: RUN_COMPLETED
-// TclEventType: RUN_STATUS_CHANGE
-// TclEventType: RUN_STEP_COMPLETED
-// TclEventType: RUN_COMPLETED
-// TclEventType: RUN_STATUS_CHANGE
-// TclEventType: RUN_STEP_COMPLETED
 expandTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "Out-of-Context Module Runs ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; ", 2); // ar (PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE)
-expandTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "design_dft ;  ; Submodule Runs Complete ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Sat Nov 08 22:25:12 PST 2025 ; 00:06:17 ;  ;  ;  ;  ; ", 3); // ar (PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE)
-// Elapsed time: 26 seconds
-selectTreeTableHeader(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "Constraints", 1); // ar (PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE)
+expandTreeTable(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "design_dft_fix ;  ; Running Submodule Runs ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ;  ; Sun Nov 09 00:11:01 PST 2025 ; 00:01:53 ;  ;  ;  ;  ; ", 3); // ar (PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE)
+selectTreeTableHeader(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "Name", 0); // ar (PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 403ms to process. Increasing delay to 3000 ms.
+// WARNING: HSwingWorker (Update Runs Swing Worker) is taking 1492 ms. Increasing delay to 3000 ms.
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// [GUI Memory]: 214 MB (+4178kb) [00:18:06]
+// [GUI Memory]: 228 MB (+2915kb) [00:18:07]
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
 // TclEventType: RUN_COMPLETED
 // TclEventType: RUN_STATUS_CHANGE
 // TclEventType: RUN_STEP_COMPLETED
 // TclEventType: RUN_STATUS_CHANGE
 // TclEventType: RUN_STEP_COMPLETED
-// Elapsed time: 254 seconds
-selectTreeTableHeader(PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE, "WNS", 3); // ar (PAResourceEtoH.ExpRunTreePanel_EXP_RUN_TREE_TABLE)
 // TclEventType: RUN_COMPLETED
 // TclEventType: RUN_STATUS_CHANGE
-// Elapsed time: 12 seconds
+// Elapsed time: 554 seconds
 selectButton(RDIResource.BaseDialog_OK, "OK", "Bitstream Generation Completed"); // a (RDIResource.BaseDialog_OK)
 // Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
 // Tcl Message: open_run impl_1 
-// HMemoryUtils.trashcanNow. Engine heap size: 2,812 MB. GUI used memory: 137 MB. Current time: 11/8/25, 10:36:29 PM PST
-// [Engine Memory]: 3,050 MB (+289963kb) [00:38:10]
+// [Engine Memory]: 2,754 MB (+77369kb) [00:25:12]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,843 MB. GUI used memory: 131 MB. Current time: 11/9/25, 12:22:18 AM PST
+// [Engine Memory]: 3,061 MB (+178310kb) [00:25:24]
 // TclEventType: SDC_CONSTRAINT_ADD
 // TclEventType: POWER_CNS_STALE
 // TclEventType: SDC_CONSTRAINT_ADD
 // TclEventType: FLOORPLAN_MODIFY
 // TclEventType: DESIGN_NEW
-// HMemoryUtils.trashcanNow. Engine heap size: 3,588 MB. GUI used memory: 136 MB. Current time: 11/8/25, 10:36:45 PM PST
-// [Engine Memory]: 3,588 MB (+404263kb) [00:38:19]
-// Xgd.load filename: /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/./.Xil/Vivado-1444604-ieng6-253.ucsd.edu/xc7z020_detail.xgd_10384732 elapsed time: 1.3s
-// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 1.6s
+// HMemoryUtils.trashcanNow. Engine heap size: 3,549 MB. GUI used memory: 130 MB. Current time: 11/9/25, 12:22:33 AM PST
+// [Engine Memory]: 3,549 MB (+350304kb) [00:25:28]
+// Xgd.load filename: /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/./.Xil/Vivado-1582522-ieng6-253.ucsd.edu/xc7z020_detail.xgd_4F02C5C9 elapsed time: 1s
+// DeviceModel: Load Xgds SwingWorker Join Forever elapsed time: 1.3s
 // TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
-// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 1.4s
+// RouteApi::loadEngineXgdAndInitRouteStorage elapsed time: 1.2s
+// [Engine Memory]: 3,767 MB (+42548kb) [00:25:31]
 // TclEventType: DESIGN_NEW
-// [Engine Memory]: 3,877 MB (+114744kb) [00:38:24]
 // DeviceView Instantiated
-// WARNING: HEventQueue.dispatchEvent() is taking  4131 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  3627 ms.
+// TclEventType: CURR_DESIGN_SET
 // Tcl Message: INFO: [Device 21-403] Loading part xc7z020clg400-1 
-// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.31 ; elapsed = 00:00:00.32 . Memory (MB): peak = 8993.434 ; gain = 0.000 ; free physical = 12805 ; free virtual = 19617 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.34 ; elapsed = 00:00:00.32 . Memory (MB): peak = 8968.773 ; gain = 0.000 ; free physical = 13093 ; free virtual = 20051 
 // Tcl Message: INFO: [Netlist 29-17] Analyzing 161 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2024.2 INFO: [Project 1-570] Preparing netlist for logic optimization 
-// Tcl Message: Read ShapeDB Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.06 . Memory (MB): peak = 9120.965 ; gain = 4.000 ; free physical = 12680 ; free virtual = 19493 
+// Tcl Message: Read ShapeDB Complete: Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.05 . Memory (MB): peak = 9074.461 ; gain = 4.000 ; free physical = 12965 ; free virtual = 19924 
 // Tcl Message: INFO: [Timing 38-478] Restoring timing data from binary archive. INFO: [Timing 38-479] Binary timing data restore complete. INFO: [Project 1-856] Restoring constraints from binary archive. INFO: [Project 1-853] Binary constraint restore complete. INFO: [Designutils 20-5722] Start Reading Physical Databases. 
 // Tcl Message: Reading placement. 
-// Tcl Message: Read Netlist Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 9690.684 ; gain = 0.000 ; free physical = 12178 ; free virtual = 18990 
+// Tcl Message: Read Netlist Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9642.211 ; gain = 0.000 ; free physical = 12453 ; free virtual = 19412 
 // Tcl Message: Reading placer database... 
-// TclEventType: CURR_DESIGN_SET
-// Tcl Message: Read Device Cache: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 9690.684 ; gain = 0.000 ; free physical = 12178 ; free virtual = 18990 Read PlaceDB: Time (s): cpu = 00:00:00.65 ; elapsed = 00:00:00.63 . Memory (MB): peak = 9690.684 ; gain = 0.000 ; free physical = 12170 ; free virtual = 18982 Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9690.684 ; gain = 0.000 ; free physical = 12170 ; free virtual = 18982 
+// Tcl Message: Read Device Cache: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 9642.211 ; gain = 0.000 ; free physical = 12450 ; free virtual = 19409 Read PlaceDB: Time (s): cpu = 00:00:00.69 ; elapsed = 00:00:00.67 . Memory (MB): peak = 9652.211 ; gain = 10.000 ; free physical = 12446 ; free virtual = 19405 Read PulsedLatchDB: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9652.211 ; gain = 0.000 ; free physical = 12446 ; free virtual = 19405 
 // Tcl Message: Reading routing. 
-// Tcl Message: Read RouteStorage: Time (s): cpu = 00:00:00.28 ; elapsed = 00:00:00.13 . Memory (MB): peak = 9695.684 ; gain = 5.000 ; free physical = 12170 ; free virtual = 18982 Read Physdb Files: Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:00.82 . Memory (MB): peak = 9695.684 ; gain = 15.000 ; free physical = 12170 ; free virtual = 18982 
-// Tcl Message: Restored from archive | CPU: 0.990000 secs | Memory: 14.176315 MB | 
-// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.96 ; elapsed = 00:00:00.82 . Memory (MB): peak = 9695.684 ; gain = 15.000 ; free physical = 12170 ; free virtual = 18982 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9695.684 ; gain = 0.000 ; free physical = 12162 ; free virtual = 18975 
+// Tcl Message: Read RouteStorage: Time (s): cpu = 00:00:00.29 ; elapsed = 00:00:00.16 . Memory (MB): peak = 9658.211 ; gain = 6.000 ; free physical = 12438 ; free virtual = 19397 Read Physdb Files: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.88 . Memory (MB): peak = 9658.211 ; gain = 16.000 ; free physical = 12438 ; free virtual = 19397 
+// Tcl Message: Restored from archive | CPU: 1.050000 secs | Memory: 14.263718 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.88 . Memory (MB): peak = 9658.211 ; gain = 16.000 ; free physical = 12438 ; free virtual = 19397 Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9658.211 ; gain = 0.000 ; free physical = 12444 ; free virtual = 19403 
 // Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary:   A total of 13 instances were transformed.   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 6 instances   RAM32X1D => RAM32X1D (RAMD32(x2)): 1 instance    SRLC32E => SRL16E: 6 instances  
 // TclEventType: CURR_DESIGN_SET
 // Device view-level: 0.0
 // RouteApi: Init Delay Mediator Swing Worker Finished
-// Tcl Message: open_run: Time (s): cpu = 00:00:33 ; elapsed = 00:00:29 . Memory (MB): peak = 9997.066 ; gain = 1111.426 ; free physical = 11850 ; free virtual = 18672 
+// Tcl Message: open_run: Time (s): cpu = 00:00:36 ; elapsed = 00:00:28 . Memory (MB): peak = 9958.621 ; gain = 1106.113 ; free physical = 12195 ; free virtual = 19154 
 // TclEventType: DRC_ADDED
 // TclEventType: METHODOLOGY_ADDED
-// HMemoryUtils.trashcanNow. Engine heap size: 4,053 MB. GUI used memory: 170 MB. Current time: 11/8/25, 10:36:56 PM PST
 // TclEventType: POWER_UPDATED
-// [GUI Memory]: 253 MB (+4156kb) [00:38:33]
-// WARNING: HEventQueue.dispatchEvent() is taking  3812 ms.
+// [Engine Memory]: 4,012 MB (+59469kb) [00:25:39]
+// [GUI Memory]: 242 MB (+2850kb) [00:25:41]
+// [GUI Memory]: 255 MB (+258kb) [00:25:41]
+// WARNING: HEventQueue.dispatchEvent() is taking  3924 ms.
 // TclEventType: TIMING_SUMMARY_UPDATED
-// WARNING: HEventQueue.dispatchEvent() is taking  1025 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 4,445 MB. GUI used memory: 187 MB. Current time: 11/9/25, 12:22:48 AM PST
+// [Engine Memory]: 4,314 MB (+107053kb) [00:25:44]
 // Elapsed Time for: 'PAResourceItoN.MsgLongTask_MESSAGE_LONG_TASK/q.a': 35s
-// [Engine Memory]: 5,166 MB (+1148203kb) [00:38:37]
 // 'dV' command handler elapsed time: 37 seconds
-// WARNING: HEventQueue.dispatchEvent() is taking  2147 ms.
-// Elapsed time: 38 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  2051 ms.
+// Elapsed time: 37 seconds
 dismissDialog("Open Implemented Design"); // bh (Open Implemented Design Progress)
-// [GUI Memory]: 274 MB (+8656kb) [00:38:57]

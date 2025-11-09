@@ -38,7 +38,7 @@ Rmse rmse_R,  rmse_I;
 
 int main()
 {
-        printf("-------axis_fp_example Test-------\n");
+        printf("-------dft_example Test-------\n");
 	hls::stream<transPkt> In_R, In_I, Out_R, Out_I;
 	transPkt pkt_In_R, pkt_In_I, pkt_Out_R, pkt_Out_I;
 	//fp_int dataA, dataB, dataC, dataD;
@@ -56,10 +56,12 @@ int main()
 	{
 		In_R_arr[i] = i;
 		In_I_arr[i] = 0.0;
+		fprintf(stdout, "Initializing Inputs\n");
 
 	}
 	
 	for (int i = 0; i < SIZE; i++) {
+		fprintf(stdout, "Writing Inputs\n");
 		pkt_In_R.data = In_R_arr[i];
 		pkt_In_I.data = In_I_arr[i];
 		// Prepare tlast signal
@@ -74,25 +76,31 @@ int main()
 		In_I.write(pkt_In_I);
 	}
 
+	fprintf(stdout, "Starting DFT\n");
 	// DFT
 	dft(In_R, In_I,Out_R,Out_I);
+	fprintf(stdout, "Finished DFT\n");
 
 
 	// comparing with golden output
 	for(int i=0; i<SIZE; i++)
 	{
+	        fprintf(stdout, "Comparing with golden output\n");
 		// Read the results from output streams
 		pkt_Out_R = Out_R.read();
 		pkt_Out_I = Out_I.read();
 		dataC = pkt_Out_R.data;
 		dataD = pkt_Out_I.data;
 
+		printf("Comparing Real %0f %0f\n", dataC, gold_R);
+		printf("Comparing Imaginary %0f %0f\n", dataD, gold_I);
 		fscanf(fp, "%d %f %f", &index, &gold_R, &gold_I);
 		rmse_R.add_value((float)dataC - gold_R);
 		rmse_I.add_value((float)dataD - gold_I);
 	}
 	fclose(fp);
 
+	fprintf(stdout, "Printing error results\n");
 
 	// printing error results
 	printf("----------------------------------------------\n");

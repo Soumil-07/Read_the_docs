@@ -25,12 +25,15 @@ void dft(
 
 		real_sample_data[i] = real_sample_pkt.data;
 		imag_sample_data[i] = imag_sample_pkt.data;
+
+		real_op_data[i] = 0;
+		imag_op_data[i] = 0;
 	
 	}
 
 	//fprintf(stdout, "Here after loading inputs\n");
 
-	while (true) {
+	//while (true) {
 		//real_sample_pkt = real_sample.read();
 		//imag_sample_pkt = imag_sample.read();
 		// Use integer type to read from the AXIS packets
@@ -47,7 +50,7 @@ void dft(
 				imag_op_data[i] += (real_sample_data[j] * s + imag_sample_data[j] * c);
 			}
 		}
-		break;
+	//	break;
 		////AXIS output packets are expecting integer type
 		//real_sample_pkt.data = real_op_data;
 		//imag_sample_pkt.data = imag_op_data;
@@ -58,7 +61,7 @@ void dft(
 		//if (real_sample_pkt.last == 1 || imag_sample_pkt.last == 1) {
 		//	break;
 		//}
-	}
+	//}
 
 	//fprintf(stdout, "Here after processing inputs\n");
 	for (int i = 0; i < SIZE; i++) {
@@ -69,6 +72,11 @@ void dft(
 		if(i == SIZE - 1) {
 			real_op_pkt.last == 1;
 			imag_op_pkt.last == 1;
+		}
+		else {
+			real_op_pkt.last == 0;
+			imag_op_pkt.last == 0;
+
 		}
 
 		real_op.write(real_op_pkt);
