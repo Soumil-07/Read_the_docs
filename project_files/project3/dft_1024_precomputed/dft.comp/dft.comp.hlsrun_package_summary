@@ -1,0 +1,120 @@
+<ENTRY>
+{
+ "thisFile": "/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/dft.comp/dft.comp.hlsrun_package_summary",
+ "connectId": "",
+ "serverToken": "",
+ "timestamp": "0"
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_CmdStep",
+ "dateTimestamp": "Sun Nov  9 02:12:39 2025",
+ "timestampMillis": "1762683159688",
+ "buildStep": {
+  "cmdId": "4e31af05-a0de-4cbd-8d90-214bc705c2a7",
+  "name": "vitis-run",
+  "logFile": "/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/logs/hls_run_package.log",
+  "commandLine": "vitis-run --mode hls --tcl /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/export_dft.tcl",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Nov  9 02:12:39 2025",
+ "timestampMillis": "1762683159689",
+ "status": {
+  "cmdId": "4e31af05-a0de-4cbd-8d90-214bc705c2a7",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_FlowMetaData",
+ "dateTimestamp": "Sun Nov  9 02:12:39 2025",
+ "timestampMillis": "1762683159690",
+ "buildSummary": {
+  "hardwarePlatform": "",
+  "hardwareDsa": "",
+  "platformDirectory": "",
+  "runtime": "",
+  "systemConfig": "",
+  "flow": "BF_RUN",
+  "target": "TT_HLS_IP",
+  "kernels": [
+   {
+    "base": {
+     "type": "KERNEL",
+     "name": "dft",
+     "file": "",
+     "reports": [],
+     "uuid": ""
+    },
+    "sources": [
+     "/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/dft.cpp"
+    ],
+    "psSources": [],
+    "cuNames": [],
+    "type": "HLS",
+    "frequency": 0,
+    "freqUnits": ""
+   }
+  ],
+  "toolVersion": "2024.2"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_SubCmdStep",
+ "dateTimestamp": "Sun Nov  9 02:12:39 2025",
+ "timestampMillis": "1762683159691",
+ "buildStep": {
+  "cmdId": "0c8ecfa3-ed2b-4f8a-ad41-5b7049ace58c",
+  "name": "export_design",
+  "logFile": "/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/dft.comp/hls/hls.log",
+  "commandLine": "export_design",
+  "args": [],
+  "iniFiles": [],
+  "cwd": "/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Nov  9 02:12:39 2025",
+ "timestampMillis": "1762683159692",
+ "status": {
+  "cmdId": "0c8ecfa3-ed2b-4f8a-ad41-5b7049ace58c",
+  "state": "CS_RUNNING"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Nov  9 02:13:24 2025",
+ "timestampMillis": "1762683204257",
+ "status": {
+  "cmdId": "0c8ecfa3-ed2b-4f8a-ad41-5b7049ace58c",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>
+<ENTRY>
+{
+ "type": "ET_Status",
+ "dateTimestamp": "Sun Nov  9 02:13:24 2025",
+ "timestampMillis": "1762683204269",
+ "status": {
+  "cmdId": "4e31af05-a0de-4cbd-8d90-214bc705c2a7",
+  "state": "CS_PASSED"
+ }
+}
+</ENTRY>

@@ -1,0 +1,41 @@
+--- !Missed
+Pass:            inline
+Name:            NeverInline
+Function:        apatb_dft_ir
+Args:            
+  - Callee:          'dft(hls::stream<hls::axis<float, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&, hls::stream<hls::axis<float, 0ul, 0ul, 0ul, (unsigned char)56, false>, 0>&)'
+    DebugLoc:        { File: dft.cpp, Line: 12, Column: 0 }
+  - String:          ' not inlined into '
+  - Caller:          apatb_dft_ir
+  - String:          ' because it should never be inlined (cost=never)'
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_21_1
+  - String:          '> at '
+  - LoopLoc:         'dft.cpp:21:19'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_44_3
+  - String:          '> at '
+  - LoopLoc:         'dft.cpp:44:21'
+  - String:          ' '
+...
+--- !HLSReportInfo
+Pass:            auto-loop-pipeline
+Name:            AutoLoopPipeline
+Args:            
+  - String:          'automatically set the pipeline for Loop< '
+  - LoopName:        VITIS_LOOP_67_4
+  - String:          '> at '
+  - LoopLoc:         'dft.cpp:67:19'
+  - String:          ' '
+...

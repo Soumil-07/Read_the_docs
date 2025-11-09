@@ -1,0 +1,37 @@
+#-----------------------------------------------------------
+# Vivado v2024.2 (64-bit)
+# SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+# IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+# SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+# Start of session at: Sun Nov  9 02:41:17 2025
+# Process ID         : 1761664
+# Current directory  : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft__keep/project_dft__keep.runs/design_dft_keep_axi_mem_intercon_imp_auto_us_0_synth_1
+# Command line       : vivado -log design_dft_keep_axi_mem_intercon_imp_auto_us_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_dft_keep_axi_mem_intercon_imp_auto_us_0.tcl
+# Log file           : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft__keep/project_dft__keep.runs/design_dft_keep_axi_mem_intercon_imp_auto_us_0_synth_1/design_dft_keep_axi_mem_intercon_imp_auto_us_0.vds
+# Journal file       : /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft__keep/project_dft__keep.runs/design_dft_keep_axi_mem_intercon_imp_auto_us_0_synth_1/vivado.jou
+# Running On         : ieng6-253.ucsd.edu
+# Platform           : Linuxmint
+# Operating System   : Linux Mint 22.1
+# Processor Detail   : Intel(R) Xeon(R) Gold 5220 CPU @ 2.20GHz
+# CPU Frequency      : 2194.843 MHz
+# CPU Physical cores : 4
+# CPU Logical cores  : 4
+# Host memory        : 33655 MB
+# Swap memory        : 1023 MB
+# Total Virtual      : 34679 MB
+# Available Virtual  : 21001 MB
+#-----------------------------------------------------------
+source design_dft_keep_axi_mem_intercon_imp_auto_us_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1494.973 ; gain = 24.871 ; free physical = 12580 ; free virtual = 19546
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/dft.comp/hls/impl/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/software/common/Xilinx_Vitis/Vivado/2024.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_dft_keep_axi_mem_intercon_imp_auto_us_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry a1f4e854dde34f3e to dir: /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft__keep/project_dft__keep.runs/design_dft_keep_axi_mem_intercon_imp_auto_us_0_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft__keep/project_dft__keep.cache/ip/2024.2/a/1/a1f4e854dde34f3e/design_dft_keep_axi_mem_intercon_imp_auto_us_2.dcp to /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft__keep/project_dft__keep.runs/design_dft_keep_axi_mem_intercon_imp_auto_us_0_synth_1/design_dft_keep_axi_mem_intercon_imp_auto_us_0.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft__keep/project_dft__keep.cache/ip/2024.2/a/1/a1f4e854dde34f3e/design_dft_keep_axi_mem_intercon_imp_auto_us_2_stub.v to /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft__keep/project_dft__keep.runs/design_dft_keep_axi_mem_intercon_imp_auto_us_0_synth_1/design_dft_keep_axi_mem_intercon_imp_auto_us_0_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft__keep/project_dft__keep.cache/ip/2024.2/a/1/a1f4e854dde34f3e/design_dft_keep_axi_mem_intercon_imp_auto_us_2_stub.vhdl to /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft__keep/project_dft__keep.runs/design_dft_keep_axi_mem_intercon_imp_auto_us_0_synth_1/design_dft_keep_axi_mem_intercon_imp_auto_us_0_stub.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft__keep/project_dft__keep.cache/ip/2024.2/a/1/a1f4e854dde34f3e/design_dft_keep_axi_mem_intercon_imp_auto_us_2_sim_netlist.v to /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft__keep/project_dft__keep.runs/design_dft_keep_axi_mem_intercon_imp_auto_us_0_synth_1/design_dft_keep_axi_mem_intercon_imp_auto_us_0_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft__keep/project_dft__keep.cache/ip/2024.2/a/1/a1f4e854dde34f3e/design_dft_keep_axi_mem_intercon_imp_auto_us_2_sim_netlist.vhdl to /home/linux/ieng6/students/186/dnwadhwani/Desktop/project3/Read_the_docs/project_files/project3/dft_1024_precomputed/project_dft__keep/project_dft__keep.runs/design_dft_keep_axi_mem_intercon_imp_auto_us_0_synth_1/design_dft_keep_axi_mem_intercon_imp_auto_us_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_dft_keep_axi_mem_intercon_imp_auto_us_0, cache-ID = a1f4e854dde34f3e.
+INFO: [Common 17-206] Exiting Vivado at Sun Nov  9 02:41:39 2025...

@@ -1,0 +1,163 @@
+
+
+================================================================
+== Synthesis Summary Report of 'dft'
+================================================================
++ General Information: 
+    * Date:           Sun Nov  9 02:12:23 2025
+    * Version:        2024.2 (Build 5238294 on Nov  8 2024)
+    * Project:        dft.comp
+    * Solution:       hls (Vivado IP Flow Target)
+    * Product family: zynq
+    * Target device:  xc7z020-clg400-1
+    
+
++ Performance & Resource Estimates: 
+    
+    PS: '+' for module; 'o' for loop; '*' for dataflow
+    +-------------------------------------------------+------+------+---------+-----------+----------+---------+---------+----------+---------+--------+-----------+-----------+-----+
+    |                     Modules                     | Issue|      | Latency |  Latency  | Iteration|         |   Trip  |          |         |        |           |           |     |
+    |                     & Loops                     | Type | Slack| (cycles)|    (ns)   |  Latency | Interval|  Count  | Pipelined|  BRAM   |   DSP  |     FF    |    LUT    | URAM|
+    +-------------------------------------------------+------+------+---------+-----------+----------+---------+---------+----------+---------+--------+-----------+-----------+-----+
+    |+ dft                                            |     -|  0.04|  6293532|  6.294e+07|         -|  6293533|        -|        no|  12 (4%)|  5 (2%)|  1269 (1%)|  1861 (3%)|    -|
+    | + dft_Pipeline_VITIS_LOOP_21_1                  |     -|  0.82|     1026|  1.026e+04|         -|     1026|        -|        no|        -|       -|   27 (~0%)|   86 (~0%)|    -|
+    |  o VITIS_LOOP_21_1                              |     -|  7.30|     1024|  1.024e+04|         2|        1|     1024|       yes|        -|       -|          -|          -|    -|
+    | + dft_Pipeline_VITIS_LOOP_43_2_VITIS_LOOP_44_3  |     -|  0.04|  6291473|  6.291e+07|         -|  6291473|        -|        no|   4 (1%)|  5 (2%)|  1098 (1%)|  1285 (2%)|    -|
+    |  o VITIS_LOOP_43_2_VITIS_LOOP_44_3              |    II|  7.30|  6291471|  6.291e+07|        22|        6|  1048576|       yes|        -|       -|          -|          -|    -|
+    | + dft_Pipeline_VITIS_LOOP_67_4                  |     -|  2.46|     1026|  1.026e+04|         -|     1026|        -|        no|        -|       -|   15 (~0%)|   96 (~0%)|    -|
+    |  o VITIS_LOOP_67_4                              |     -|  7.30|     1024|  1.024e+04|         2|        1|     1024|       yes|        -|       -|          -|          -|    -|
+    +-------------------------------------------------+------+------+---------+-----------+----------+---------+---------+----------+---------+--------+-----------+-----------+-----+
+
+
+================================================================
+== HW Interfaces
+================================================================
+* S_AXILITE Interfaces
++---------------+------------+---------------+
+| Interface     | Data Width | Address Width |
++---------------+------------+---------------+
+| s_axi_control | 32         | 4             |
++---------------+------------+---------------+
+
+* S_AXILITE Registers
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| Interface     | Register | Offset | Width | Access | Description                      | Bit Fields                                                           |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+| s_axi_control | CTRL     | 0x00   | 32    | RW     | Control signals                  | 0=AP_START 1=AP_DONE 2=AP_IDLE 3=AP_READY 7=AUTO_RESTART 9=INTERRUPT |
+| s_axi_control | GIER     | 0x04   | 32    | RW     | Global Interrupt Enable Register | 0=Enable                                                             |
+| s_axi_control | IP_IER   | 0x08   | 32    | RW     | IP Interrupt Enable Register     | 0=CHAN0_INT_EN 1=CHAN1_INT_EN                                        |
+| s_axi_control | IP_ISR   | 0x0c   | 32    | RW     | IP Interrupt Status Register     | 0=CHAN0_INT_ST 1=CHAN1_INT_ST                                        |
++---------------+----------+--------+-------+--------+----------------------------------+----------------------------------------------------------------------+
+
+* AXIS
++-------------+-----------+---------------+-------+-------+-------+--------+-------+--------+
+| Interface   | Direction | Register Mode | TDATA | TKEEP | TLAST | TREADY | TSTRB | TVALID |
++-------------+-----------+---------------+-------+-------+-------+--------+-------+--------+
+| imag_op     | out       | both          | 32    | 4     | 1     | 1      | 4     | 1      |
+| imag_sample | in        | both          | 32    | 4     | 1     | 1      | 4     | 1      |
+| real_op     | out       | both          | 32    | 4     | 1     | 1      | 4     | 1      |
+| real_sample | in        | both          | 32    | 4     | 1     | 1      | 4     | 1      |
++-------------+-----------+---------------+-------+-------+-------+--------+-------+--------+
+
+* TOP LEVEL CONTROL
++-----------+------------+-----------+
+| Interface | Type       | Ports     |
++-----------+------------+-----------+
+| ap_clk    | clock      | ap_clk    |
+| ap_rst_n  | reset      | ap_rst_n  |
+| interrupt | interrupt  | interrupt |
+| ap_ctrl   | ap_ctrl_hs |           |
++-----------+------------+-----------+
+
+
+================================================================
+== SW I/O Information
+================================================================
+* Top Function Arguments
++-------------+-----------+---------------------------------------------------+
+| Argument    | Direction | Datatype                                          |
++-------------+-----------+---------------------------------------------------+
+| real_sample | in        | stream<hls::axis<float, 0, 0, 0, '8', false>, 0>& |
+| imag_sample | in        | stream<hls::axis<float, 0, 0, 0, '8', false>, 0>& |
+| real_op     | out       | stream<hls::axis<float, 0, 0, 0, '8', false>, 0>& |
+| imag_op     | out       | stream<hls::axis<float, 0, 0, 0, '8', false>, 0>& |
++-------------+-----------+---------------------------------------------------+
+
+* SW-to-HW Mapping
++-------------+--------------+-----------+
+| Argument    | HW Interface | HW Type   |
++-------------+--------------+-----------+
+| real_sample | real_sample  | interface |
+| imag_sample | imag_sample  | interface |
+| real_op     | real_op      | interface |
+| imag_op     | imag_op      | interface |
++-------------+--------------+-----------+
+
+
+================================================================
+== Bind Op Report
+================================================================
++-------------------------------------------------+-----+--------+------------------+--------+----------+---------+
+| Name                                            | DSP | Pragma | Variable         | Op     | Impl     | Latency |
++-------------------------------------------------+-----+--------+------------------+--------+----------+---------+
+| + dft                                           | 5   |        |                  |        |          |         |
+|  + dft_Pipeline_VITIS_LOOP_21_1                 | 0   |        |                  |        |          |         |
+|    icmp_ln21_fu_158_p2                          |     |        | icmp_ln21        | seteq  | auto     | 0       |
+|    add_ln21_fu_164_p2                           |     |        | add_ln21         | add    | fabric   | 0       |
+|  + dft_Pipeline_VITIS_LOOP_43_2_VITIS_LOOP_44_3 | 5   |        |                  |        |          |         |
+|    icmp_ln43_fu_180_p2                          |     |        | icmp_ln43        | seteq  | auto     | 0       |
+|    add_ln43_fu_186_p2                           |     |        | add_ln43         | add    | fabric   | 0       |
+|    icmp_ln44_fu_195_p2                          |     |        | icmp_ln44        | seteq  | auto     | 0       |
+|    select_ln43_fu_201_p3                        |     |        | select_ln43      | select | auto_sel | 0       |
+|    add_ln43_1_fu_250_p2                         |     |        | add_ln43_1       | add    | fabric   | 0       |
+|    select_ln43_1_fu_256_p3                      |     |        | select_ln43_1    | select | auto_sel | 0       |
+|    first_iter_0_fu_209_p2                       |     |        | first_iter_0     | seteq  | auto     | 0       |
+|    mul_10s_10s_10_1_1_U15                       |     |        | index            | mul    | auto     | 0       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U14            | 3   |        | mul              | fmul   | maxdsp   | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U14            | 3   |        | mul1             | fmul   | maxdsp   | 3       |
+|    faddfsub_32ns_32ns_32_5_full_dsp_1_U13       | 2   |        | sub              | fsub   | fulldsp  | 4       |
+|    faddfsub_32ns_32ns_32_5_full_dsp_1_U13       | 2   |        | add              | fsub   | fulldsp  | 4       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U14            | 3   |        | mul2             | fmul   | maxdsp   | 3       |
+|    fmul_32ns_32ns_32_4_max_dsp_1_U14            | 3   |        | mul3             | fmul   | maxdsp   | 3       |
+|    faddfsub_32ns_32ns_32_5_full_dsp_1_U13       | 2   |        | add1             | fsub   | fulldsp  | 4       |
+|    faddfsub_32ns_32ns_32_5_full_dsp_1_U13       | 2   |        | add2             | fsub   | fulldsp  | 4       |
+|    add_ln44_fu_225_p2                           |     |        | add_ln44         | add    | fabric   | 0       |
+|    icmp_ln44_1_fu_231_p2                        |     |        | icmp_ln44_1      | seteq  | auto     | 0       |
+|  + dft_Pipeline_VITIS_LOOP_67_4                 | 0   |        |                  |        |          |         |
+|    icmp_ln67_fu_142_p2                          |     |        | icmp_ln67        | seteq  | auto     | 0       |
+|    add_ln67_fu_148_p2                           |     |        | add_ln67         | add    | fabric   | 0       |
+|    imag_op_pkt_last_fu_160_p2                   |     |        | imag_op_pkt_last | seteq  | auto     | 0       |
++-------------------------------------------------+-----+--------+------------------+--------+----------+---------+
+
+
+================================================================
+== Storage Report
+================================================================
++-------------------------------------------------+--------------+-----------+------+------+--------+------------------------+------+---------+------------------+
+| Name                                            | Usage        | Type      | BRAM | URAM | Pragma | Variable               | Impl | Latency | Bitwidth, Depth, |
+|                                                 |              |           |      |      |        |                        |      |         | Banks            |
++-------------------------------------------------+--------------+-----------+------+------+--------+------------------------+------+---------+------------------+
+| + dft                                           |              |           | 12   | 0    |        |                        |      |         |                  |
+|   control_s_axi_U                               | interface    | s_axilite |      |      |        |                        |      |         |                  |
+|   real_sample_data_U                            | ram_1p array |           | 2    |      |        | real_sample_data       | auto | 1       | 32, 1024, 1      |
+|   imag_sample_data_U                            | ram_1p array |           | 2    |      |        | imag_sample_data       | auto | 1       | 32, 1024, 1      |
+|   real_op_data_U                                | ram_1p array |           | 2    |      |        | real_op_data           | auto | 1       | 32, 1024, 1      |
+|   imag_op_data_U                                | ram_1p array |           | 2    |      |        | imag_op_data           | auto | 1       | 32, 1024, 1      |
+|  + dft_Pipeline_VITIS_LOOP_43_2_VITIS_LOOP_44_3 |              |           | 4    | 0    |        |                        |      |         |                  |
+|    cos_coefficients_table_U                     | rom_1p       |           | 2    |      |        | cos_coefficients_table | auto | 1       | 32, 1024, 1      |
+|    sin_coefficients_table_U                     | rom_1p       |           | 2    |      |        | sin_coefficients_table | auto | 1       | 32, 1024, 1      |
++-------------------------------------------------+--------------+-----------+------+------+--------+------------------------+------+---------+------------------+
+
+
+================================================================
+== Pragma Report
+================================================================
+* Valid Pragma Syntax
++-----------+--------------------------------------------------------+------------------------------------------------------------+
+| Type      | Options                                                | Location                                                   |
++-----------+--------------------------------------------------------+------------------------------------------------------------+
+| interface | mode=axis port=real_sample,imag_sample,real_op,imag_op | dft.cpp:13 in dft, real_sample,imag_sample,real_op,imag_op |
+| interface | mode=s_axilite port=return                             | dft.cpp:14 in dft, return                                  |
++-----------+--------------------------------------------------------+------------------------------------------------------------+
+
+

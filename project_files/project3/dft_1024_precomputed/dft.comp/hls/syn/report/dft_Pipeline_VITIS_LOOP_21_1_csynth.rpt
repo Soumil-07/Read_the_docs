@@ -1,0 +1,171 @@
+
+
+================================================================
+== Vitis HLS Report for 'dft_Pipeline_VITIS_LOOP_21_1'
+================================================================
+* Date:           Sun Nov  9 02:12:22 2025
+
+* Version:        2024.2 (Build 5238294 on Nov  8 2024)
+* Project:        dft.comp
+* Solution:       hls (Vivado IP Flow Target)
+* Product family: zynq
+* Target device:  xc7z020-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+----------+----------+------------+
+    |  Clock |  Target  | Estimated| Uncertainty|
+    +--------+----------+----------+------------+
+    |ap_clk  |  10.00 ns|  6.481 ns|     2.70 ns|
+    +--------+----------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+------+------------------------------------------------+
+    |  Latency (cycles) |   Latency (absolute)  |   Interval  |                    Pipeline                    |
+    |   min   |   max   |    min    |    max    |  min |  max |                      Type                      |
+    +---------+---------+-----------+-----------+------+------+------------------------------------------------+
+    |     1026|     1026|  10.260 us|  10.260 us|  1025|  1025|  loop auto-rewind stp (delay=0 clock cycles(s))|
+    +---------+---------+-----------+-----------+------+------+------------------------------------------------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |                   |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- VITIS_LOOP_21_1  |     1024|     1024|         2|          1|          1|  1024|       yes|
+        +-------------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-----+--------+-------+-----+
+|       Name      | BRAM_18K| DSP |   FF   |  LUT  | URAM|
++-----------------+---------+-----+--------+-------+-----+
+|DSP              |        -|    -|       -|      -|    -|
+|Expression       |        -|    -|       0|     32|    -|
+|FIFO             |        -|    -|       -|      -|    -|
+|Instance         |        -|    -|       -|      -|    -|
+|Memory           |        -|    -|       -|      -|    -|
+|Multiplexer      |        -|    -|       0|     54|    -|
+|Register         |        -|    -|      27|      -|    -|
++-----------------+---------+-----+--------+-------+-----+
+|Total            |        0|    0|      27|     86|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Available        |      280|  220|  106400|  53200|    0|
++-----------------+---------+-----+--------+-------+-----+
+|Utilization (%)  |        0|    0|      ~0|     ~0|    0|
++-----------------+---------+-----+--------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name         | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |add_ln21_fu_164_p2              |         +|   0|  0|  12|          11|           1|
+    |ap_block_pp0_stage0_11001       |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001_grp1  |       and|   0|  0|   2|           1|           1|
+    |ap_block_pp0_stage0_11001_grp2  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln21_fu_158_p2             |      icmp|   0|  0|  12|          11|          12|
+    |ap_enable_pp0                   |       xor|   0|  0|   2|           1|           2|
+    +--------------------------------+----------+----+---+----+------------+------------+
+    |Total                           |          |   0|  0|  32|          26|          18|
+    +--------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_2     |   9|          2|   11|         22|
+    |i_fu_68                  |   9|          2|   11|         22|
+    |imag_sample_TDATA_blk_n  |   9|          2|    1|          2|
+    |real_sample_TDATA_blk_n  |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  54|         12|   26|         52|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------------------------+----+----+-----+-----------+
+    |                    Name                   | FF | LUT| Bits| Const Bits|
+    +-------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                  |   1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp1_done_reg  |   1|   0|    1|          0|
+    |ap_block_pp0_stage0_subdone_grp2_done_reg  |   1|   0|    1|          0|
+    |ap_done_reg                                |   1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1                    |   1|   0|    1|          0|
+    |i_fu_68                                    |  11|   0|   11|          0|
+    |zext_ln21_reg_209                          |  11|   0|   64|         53|
+    +-------------------------------------------+----+----+-----+-----------+
+    |Total                                      |  27|   0|   80|         53|
+    +-------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------------+-----+-----+------------+------------------------------+--------------+
+|         RTL Ports         | Dir | Bits|  Protocol  |         Source Object        |    C Type    |
++---------------------------+-----+-----+------------+------------------------------+--------------+
+|ap_clk                     |   in|    1|  ap_ctrl_hs|  dft_Pipeline_VITIS_LOOP_21_1|  return value|
+|ap_rst                     |   in|    1|  ap_ctrl_hs|  dft_Pipeline_VITIS_LOOP_21_1|  return value|
+|ap_start                   |   in|    1|  ap_ctrl_hs|  dft_Pipeline_VITIS_LOOP_21_1|  return value|
+|ap_done                    |  out|    1|  ap_ctrl_hs|  dft_Pipeline_VITIS_LOOP_21_1|  return value|
+|ap_idle                    |  out|    1|  ap_ctrl_hs|  dft_Pipeline_VITIS_LOOP_21_1|  return value|
+|ap_ready                   |  out|    1|  ap_ctrl_hs|  dft_Pipeline_VITIS_LOOP_21_1|  return value|
+|real_sample_TVALID         |   in|    1|        axis|          real_sample_V_data_V|       pointer|
+|real_sample_TDATA          |   in|   32|        axis|          real_sample_V_data_V|       pointer|
+|imag_sample_TVALID         |   in|    1|        axis|          imag_sample_V_data_V|       pointer|
+|imag_sample_TDATA          |   in|   32|        axis|          imag_sample_V_data_V|       pointer|
+|real_sample_TREADY         |  out|    1|        axis|          real_sample_V_last_V|       pointer|
+|real_sample_TLAST          |   in|    1|        axis|          real_sample_V_last_V|       pointer|
+|real_sample_TKEEP          |   in|    4|        axis|          real_sample_V_keep_V|       pointer|
+|real_sample_TSTRB          |   in|    4|        axis|          real_sample_V_strb_V|       pointer|
+|imag_sample_TREADY         |  out|    1|        axis|          imag_sample_V_last_V|       pointer|
+|imag_sample_TLAST          |   in|    1|        axis|          imag_sample_V_last_V|       pointer|
+|imag_sample_TKEEP          |   in|    4|        axis|          imag_sample_V_keep_V|       pointer|
+|imag_sample_TSTRB          |   in|    4|        axis|          imag_sample_V_strb_V|       pointer|
+|real_sample_data_address0  |  out|   10|   ap_memory|              real_sample_data|         array|
+|real_sample_data_ce0       |  out|    1|   ap_memory|              real_sample_data|         array|
+|real_sample_data_we0       |  out|    1|   ap_memory|              real_sample_data|         array|
+|real_sample_data_d0        |  out|   32|   ap_memory|              real_sample_data|         array|
+|imag_sample_data_address0  |  out|   10|   ap_memory|              imag_sample_data|         array|
+|imag_sample_data_ce0       |  out|    1|   ap_memory|              imag_sample_data|         array|
+|imag_sample_data_we0       |  out|    1|   ap_memory|              imag_sample_data|         array|
+|imag_sample_data_d0        |  out|   32|   ap_memory|              imag_sample_data|         array|
+|real_op_data_address0      |  out|   10|   ap_memory|                  real_op_data|         array|
+|real_op_data_ce0           |  out|    1|   ap_memory|                  real_op_data|         array|
+|real_op_data_we0           |  out|    1|   ap_memory|                  real_op_data|         array|
+|real_op_data_d0            |  out|   32|   ap_memory|                  real_op_data|         array|
+|imag_op_data_address0      |  out|   10|   ap_memory|                  imag_op_data|         array|
+|imag_op_data_ce0           |  out|    1|   ap_memory|                  imag_op_data|         array|
+|imag_op_data_we0           |  out|    1|   ap_memory|                  imag_op_data|         array|
+|imag_op_data_d0            |  out|   32|   ap_memory|                  imag_op_data|         array|
++---------------------------+-----+-----+------------+------------------------------+--------------+
+

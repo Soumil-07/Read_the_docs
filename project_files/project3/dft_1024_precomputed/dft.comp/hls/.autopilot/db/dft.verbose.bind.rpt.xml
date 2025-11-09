@@ -1,0 +1,48 @@
+<profile>
+
+<section name = "Vitis HLS Report for 'dft'" level="0">
+<item name = "Date">Sun Nov  9 02:12:22 2025
+</item>
+<item name = "Version">2024.2 (Build 5238294 on Nov  8 2024)</item>
+<item name = "Project">dft.comp</item>
+<item name = "Solution">hls (Vivado IP Flow Target)</item>
+<item name = "Product family">zynq</item>
+<item name = "Target device">xc7z020-clg400-1</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00 ns, 7.256 ns, 2.70 ns</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="8">, min, max, min, max, min, max, Type</keys>
+<column name="">6293532, 6293532, 62.935 ms, 62.935 ms, 6293533, 6293533, no</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="9">Instance, Module, min, max, min, max, min, max, Type</keys>
+<column name="grp_dft_Pipeline_VITIS_LOOP_21_1_fu_96">dft_Pipeline_VITIS_LOOP_21_1, 1026, 1026, 10.260 us, 10.260 us, 1025, 1025, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_dft_Pipeline_VITIS_LOOP_43_2_VITIS_LOOP_44_3_fu_120">dft_Pipeline_VITIS_LOOP_43_2_VITIS_LOOP_44_3, 6291473, 6291473, 62.915 ms, 62.915 ms, 6291462, 6291462, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+<column name="grp_dft_Pipeline_VITIS_LOOP_67_4_fu_132">dft_Pipeline_VITIS_LOOP_67_4, 1026, 1026, 10.260 us, 10.260 us, 1025, 1025, loop auto-rewind stp (delay=0 clock cycles(s))</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+</profile>

@@ -67,15 +67,17 @@ void dft(
 	for (int i = 0; i < SIZE; i++) {
 	//#pragma HLS unroll
 		real_op_pkt.data = real_op_data[i];
+		real_op_pkt.keep = -1;
 		imag_op_pkt.data = imag_op_data[i];
+		imag_op_pkt.keep = -1;
 
 		if(i == SIZE - 1) {
-			real_op_pkt.last == 1;
-			imag_op_pkt.last == 1;
+			real_op_pkt.last = 1;
+			imag_op_pkt.last = 1;
 		}
 		else {
-			real_op_pkt.last == 0;
-			imag_op_pkt.last == 0;
+			real_op_pkt.last = 0;
+			imag_op_pkt.last = 0;
 
 		}
 
