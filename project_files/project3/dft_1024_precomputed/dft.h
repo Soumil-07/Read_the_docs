@@ -1,7 +1,10 @@
 #include <ap_int.h>
+#include <ap_fixed.h>
+#include <stdint.h>
 
 typedef float DTYPE;
-#define SIZE 1024 		/* SIZE OF DFT */
+typedef uint16_t idx_t;
+typedef uint16_t iter_t;
 
-void dft(DTYPE real_sample[SIZE], DTYPE imag_sample[SIZE],DTYPE real_op[SIZE], DTYPE imag_op[SIZE]);
-// Use streaming interface for demo
+#define SIZE 1024 		/* SIZE OF DFT */
+void dft(DTYPE xx_R[SIZE], DTYPE xx_I[SIZE], DTYPE XX_R[SIZE], DTYPE XX_I[SIZE]);
