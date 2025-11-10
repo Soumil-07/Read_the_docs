@@ -1,9 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
-#include "dft.h" // Includes hls_stream.h, DTYPE, SIZE, and new function prototype
+#include "dft.h"
 
-// RMSE struct for error calculation
 struct Rmse
 {
 	int num_sq;
@@ -23,12 +22,9 @@ struct Rmse
 
 Rmse rmse_R,  rmse_I;
 
-// Testbench arrays to hold data
 DTYPE tb_In_R[SIZE], tb_In_I[SIZE];
 DTYPE tb_Out_R[SIZE], tb_Out_I[SIZE];
 
-// --- THIS IS THE FIX ---
-// Declare single HLS streams, NOT arrays
 hls::stream<DTYPE> hls_In_R;
 hls::stream<DTYPE> hls_In_I;
 hls::stream<DTYPE> hls_Out_R;
@@ -46,37 +42,26 @@ int main()
 		return 1;
 	}
 
-	// 1. Getting input data
 	for(int i=0; i<SIZE; i++)
 	{
 		tb_In_R[i] = i;
 		tb_In_I[i] = 0.0;
 	}
 	
-	// 2. Write data from testbench arrays into HLS input streams
-	// --- THIS IS ALSO FIXED ---
-	// Write all SIZE values to the single streams
 	for(int i=0; i<SIZE; i++)
 	{
 		hls_In_R.write(tb_In_R[i]);
 		hls_In_I.write(tb_In_I[i]);
 	}
 
-	// 3. Call the DFT function
-	// --- THIS IS ALSO FIXED ---
-	// Pass the single streams directly
 	dft(hls_In_R, hls_In_I, hls_Out_R, hls_Out_I);
 
-	// 4. Read data from HLS output streams into testbench arrays
-	// --- THIS IS ALSO FIXED ---
-	// Read all SIZE values from the single streams
 	for(int i=0; i<SIZE; i++)
 	{
 		tb_Out_R[i] = hls_Out_R.read();
 		tb_Out_I[i] = hls_Out_I.read();
 	}
 
-	// 5. Comparing with golden output
 	for(int i=0; i<SIZE; i++)
 	{
 		fscanf(fp, "%d %f %f", &index, &gold_R, &gold_I);
@@ -86,7 +71,6 @@ int main()
 	fclose(fp);
 
 
-	// 6. Printing error results
 	printf("----------------------------------------------\n");
 	printf("   RMSE(R)           RMSE(I)\n");
 	printf("%0.15f %0.15f\n", rmse_R.error, rmse_I.error);
